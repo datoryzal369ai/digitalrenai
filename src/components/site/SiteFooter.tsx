@@ -52,8 +52,10 @@ export function SiteFooter() {
               loading="lazy"
             />
             <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">
-              An AI technology company building autonomous intelligence for the real economy.
+              AI Technology &amp; Digital Ecosystem Company — building autonomous intelligence
+              systems, industry-specific AI platforms and digital ecosystems.
             </p>
+
             <p className="text-gold mt-5 text-[11px] tracking-[0.3em] uppercase">
               Reimagine • Rebuild • Redefine
             </p>

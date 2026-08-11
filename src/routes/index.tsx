@@ -525,7 +525,7 @@ function Home() {
               </div>
 
               {/* UMRAIO product identity visual */}
-              <div className="relative order-first lg:order-none">
+              <div className="relative">
                 <div className="border-border/70 from-surface/70 to-background/80 relative overflow-hidden rounded-lg border bg-gradient-to-br p-8 sm:p-12">
                   <div className="grid-bg pointer-events-none absolute inset-0 opacity-40" />
                   <div

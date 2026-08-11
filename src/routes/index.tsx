@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { TrendingUp, MessagesSquare, Workflow, BarChart3 } from "lucide-react";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
 import drmLogo from "@/assets/drm-mark.png.asset.json";

@@ -48,7 +48,7 @@ function Platforms() {
       <Section className="border-border border-y">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-md" loading="lazy" />
+            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-[330px]" loading="lazy" />
             <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
               Autonomous AI Business Executive
             </p>

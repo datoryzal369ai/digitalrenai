@@ -11,7 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CompanyRouteImport } from './routes/company'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as InvestorsRouteImport } from './routes/investors'
+import { Route as NewsroomRouteImport } from './routes/newsroom'
 import { Route as PlatformsRouteImport } from './routes/platforms'
 import { Route as TechnologyRouteImport } from './routes/technology'
 
@@ -25,9 +28,24 @@ const CompanyRoute = CompanyRouteImport.update({
   path: '/company',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImpactRoute = ImpactRouteImport.update({
   id: '/impact',
   path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestorsRoute = InvestorsRouteImport.update({
+  id: '/investors',
+  path: '/investors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsroomRoute = NewsroomRouteImport.update({
+  id: '/newsroom',
+  path: '/newsroom',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlatformsRoute = PlatformsRouteImport.update({
@@ -44,14 +62,20 @@ const TechnologyRoute = TechnologyRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/impact': typeof ImpactRoute
+  '/investors': typeof InvestorsRoute
+  '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/impact': typeof ImpactRoute
+  '/investors': typeof InvestorsRoute
+  '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
   '/technology': typeof TechnologyRoute
 }
@@ -59,22 +83,53 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/impact': typeof ImpactRoute
+  '/investors': typeof InvestorsRoute
+  '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/company' | '/impact' | '/platforms' | '/technology'
+  fullPaths:
+    | '/'
+    | '/company'
+    | '/contact'
+    | '/impact'
+    | '/investors'
+    | '/newsroom'
+    | '/platforms'
+    | '/technology'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/company' | '/impact' | '/platforms' | '/technology'
-  id: '__root__' | '/' | '/company' | '/impact' | '/platforms' | '/technology'
+  to:
+    | '/'
+    | '/company'
+    | '/contact'
+    | '/impact'
+    | '/investors'
+    | '/newsroom'
+    | '/platforms'
+    | '/technology'
+  id:
+    | '__root__'
+    | '/'
+    | '/company'
+    | '/contact'
+    | '/impact'
+    | '/investors'
+    | '/newsroom'
+    | '/platforms'
+    | '/technology'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CompanyRoute: typeof CompanyRoute
+  ContactRoute: typeof ContactRoute
   ImpactRoute: typeof ImpactRoute
+  InvestorsRoute: typeof InvestorsRoute
+  NewsroomRoute: typeof NewsroomRoute
   PlatformsRoute: typeof PlatformsRoute
   TechnologyRoute: typeof TechnologyRoute
 }
@@ -95,11 +150,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/impact': {
       id: '/impact'
       path: '/impact'
       fullPath: '/impact'
       preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investors': {
+      id: '/investors'
+      path: '/investors'
+      fullPath: '/investors'
+      preLoaderRoute: typeof InvestorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/newsroom': {
+      id: '/newsroom'
+      path: '/newsroom'
+      fullPath: '/newsroom'
+      preLoaderRoute: typeof NewsroomRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/platforms': {
@@ -122,7 +198,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CompanyRoute: CompanyRoute,
+  ContactRoute: ContactRoute,
   ImpactRoute: ImpactRoute,
+  InvestorsRoute: InvestorsRoute,
+  NewsroomRoute: NewsroomRoute,
   PlatformsRoute: PlatformsRoute,
   TechnologyRoute: TechnologyRoute,
 }

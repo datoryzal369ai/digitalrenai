@@ -790,7 +790,87 @@ function Home() {
             </div>
           </div>
         </Reveal>
+
+        {/* TECHNOLOGY → PRODUCT → INDUSTRY */}
+        <Reveal delay={80}>
+          <div className="mt-14 grid gap-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center">
+            <div className="border-gold/40 bg-gold/5 rounded-sm border px-6 py-5 text-center">
+              <p className="text-gold font-display text-sm tracking-[0.18em] uppercase">
+                RÉNAI.CORE™
+              </p>
+              <p className="text-muted-foreground mt-1.5 text-[10px] tracking-[0.2em] uppercase">
+                The Autonomous Intelligence Core
+              </p>
+            </div>
+            <span className="text-primary/70 text-center text-xs">↓</span>
+            <div className="border-primary/40 bg-primary/10 rounded-sm border px-6 py-5 text-center">
+              <p className="text-primary font-display text-sm tracking-[0.18em] uppercase">
+                UMRAIO®
+              </p>
+              <p className="text-muted-foreground mt-1.5 text-[10px] tracking-[0.2em] uppercase">
+                Autonomous AI Business Executive
+              </p>
+            </div>
+            <span className="text-primary/70 text-center text-xs">↓</span>
+            <div className="border-border bg-surface-2/40 rounded-sm border px-6 py-5 text-center">
+              <p className="font-display text-sm tracking-[0.18em] uppercase">Modern Umrah Agency</p>
+              <p className="text-muted-foreground mt-1.5 text-[10px] tracking-[0.2em] uppercase">
+                Real-world industry
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* PRODUCT CAPABILITIES */}
+        <Reveal delay={120}>
+          <p className="text-muted-foreground mt-16 text-[10px] tracking-[0.28em] uppercase">
+            On UMRAIO.com you will find
+          </p>
+          <div className="border-border mt-6 grid border-t border-l sm:grid-cols-2 lg:grid-cols-3">
+            {umraioProductCapabilities.map(([t, d]) => (
+              <div key={t} className="border-border border-r border-b p-7">
+                <h4 className="text-[11px] tracking-[0.18em] uppercase">{t}</h4>
+                <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* SEE UMRAIO IN ACTION */}
+        <Reveal delay={160}>
+          <div className="panel mt-16 grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="min-w-0">
+              <h3 className="text-3xl leading-[1.1] font-semibold sm:text-4xl">
+                See UMRAIO in action.
+              </h3>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Explore the dedicated UMRAIO product experience.
+              </p>
+              <a
+                href={UMRAIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-primary/50 text-primary hover:bg-primary/10 mt-8 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Visit UMRAIO.com →
+              </a>
+              <p className="text-muted-foreground mt-5 text-sm">
+                Discover the product, autonomous AI executive experience and capabilities.
+              </p>
+            </div>
+            <div className="border-border/70 from-surface/60 to-background/80 relative overflow-hidden rounded-lg border bg-gradient-to-br p-8">
+              <div className="grid-bg pointer-events-none absolute inset-0 opacity-30" />
+              <img
+                src={umraioWordmark.url}
+                alt="UMRAIO® brand mark"
+                className="relative mx-auto w-full max-w-[320px]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </Reveal>
       </Section>
+
 
       {/* PROBLEM / SOLUTION */}
       <Section id="problem-solution" className="border-border border-y">

@@ -35,8 +35,15 @@ function Platforms() {
             intro="Each ecosystem carries the domain knowledge of its industry. Each autonomous AI business executive operates inside it, powered by RÉNAI.CORE™."
           />
         </Reveal>
+        <Reveal delay={140}>
+          <img
+            src={aiExecutives.url}
+            alt="Autonomous AI business executives across the Digital Renaissance ecosystems"
+            className="mt-14 w-full rounded-sm"
+            loading="lazy"
+          />
+        </Reveal>
       </Section>
-
 
       <Section className="border-border border-y">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
@@ -151,28 +158,7 @@ function Platforms() {
           Development status is stated explicitly. Capabilities described for platforms in strategic
           development represent design intent, not released features.
         </p>
-
-        <Reveal>
-          <div className="mt-16 md:mt-20">
-            <p className="eyebrow">Our AI Platforms</p>
-            <h2 className="mt-4 text-2xl leading-[1.1] font-semibold sm:text-3xl md:text-4xl">
-              Autonomous AI Business Executives
-            </h2>
-            <figure
-              className="border-border/70 bg-background/60 mt-6 overflow-hidden rounded-lg border p-4 sm:p-6 md:p-8"
-              style={{ boxShadow: "0 30px 90px -50px color-mix(in oklab, var(--primary) 45%, transparent)" }}
-            >
-              <img
-                src={aiExecutives.url}
-                alt="Digital Renaissance Metaverse autonomous AI business executives — RAIO for UMRAIO, ORIO for WORIO, and EDIO for MEDIO."
-                className="h-auto w-full max-w-full rounded-sm object-contain"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </Reveal>
       </Section>
-
     </>
   );
 }

@@ -22,11 +22,13 @@ const columns = [
   {
     title: "Platforms",
     links: [
-      { label: "UMRAVERSE® / UMRAIO®", to: "/platforms" },
+      { label: "UMRAVERSE® Ecosystem", to: "/platforms" },
+      { label: "UMRAIO® Product Site", href: "https://www.umraio.com" },
       { label: "WORVERSE® / WORIO®", to: "/platforms" },
       { label: "MEDIVERSE® / MEDIO®", to: "/platforms" },
     ],
   },
+
   {
     title: "Investors",
     links: [

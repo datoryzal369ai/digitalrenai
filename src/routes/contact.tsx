@@ -103,7 +103,7 @@ function Contact() {
                   <span className="text-muted-foreground text-[10px] tracking-[0.18em] uppercase">
                     {k}
                   </span>
-                  {v.includes("@") ? (
+                  {v?.includes("@") ? (
                     <a
                       href={`mailto:${v}`}
                       className="hover:text-primary text-right text-sm break-all transition-colors"

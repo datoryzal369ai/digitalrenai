@@ -46,27 +46,42 @@ function Platforms() {
       </Section>
 
       <Section className="border-border border-y">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
+            <img src={umraverse.url} alt="UMRAVERSE brand mark" className="w-full max-w-sm" loading="lazy" />
             <img
               src={umraio.url}
-              alt="UMRAIO® — Autonomous AI Business Executive"
-              className="w-full max-w-[20rem] object-contain sm:max-w-[26rem]"
+              alt="UMRAIO brand mark"
+              className="mt-8 w-full max-w-xs"
               loading="lazy"
             />
-            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.32em] uppercase">
-              Autonomous AI Business Executive
-            </p>
-            <h2 className="mt-7 text-3xl leading-[1.06] font-semibold text-balance sm:text-4xl">
-              Your AI workforce. Working 24/7.
+          </Reveal>
+          <Reveal delay={120}>
+            <StatusTag tone="cyan">Flagship · Active Development</StatusTag>
+            <h2 className="mt-6 text-3xl font-semibold sm:text-4xl">
+              UMRAVERSE® — Islamic Travel &amp; Umrah Digital Ecosystem
             </h2>
-            <p className="text-muted-foreground mt-5 max-w-md leading-relaxed">
-              Built to help Umrah agencies generate leads, respond faster, close sales and grow more
-              efficiently.
+            <p className="text-muted-foreground mt-5 leading-relaxed">
+              UMRAIO® is the Autonomous AI Business Executive for modern Umrah agencies: capturing and
+              qualifying leads, understanding customer intent, automating WhatsApp conversations,
+              generating quotations, following up and analysing business performance.
             </p>
-            <div className="mt-8">
-              <StatusTag tone="cyan">Flagship · Active Development</StatusTag>
-            </div>
+            <ul className="text-muted-foreground mt-7 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
+              {[
+                "Lead intelligence",
+                "Customer intent detection",
+                "WhatsApp AI executive",
+                "Follow-up engine",
+                "Quotation generation",
+                "Marketing support",
+                "Business analytics",
+                "Next-action recommendations",
+              ].map((f) => (
+                <li key={f} className="border-border/50 border-b py-1.5">
+                  {f}
+                </li>
+              ))}
+            </ul>
             <Link
               to="/contact"
               className="border-primary/50 text-primary hover:bg-primary/10 mt-9 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
@@ -74,47 +89,8 @@ function Platforms() {
               Request a Platform Briefing
             </Link>
           </Reveal>
-
-          <Reveal delay={120}>
-            <div className="panel p-7 sm:p-9">
-              <p className="eyebrow">Capabilities</p>
-              <ul className="text-muted-foreground mt-6 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
-                {[
-                  "Lead intelligence",
-                  "Customer intent detection",
-                  "WhatsApp AI executive",
-                  "Follow-up engine",
-                  "Quotation generation",
-                  "Marketing support",
-                  "Business analytics",
-                  "Next-action recommendations",
-                ].map((f) => (
-                  <li key={f} className="border-border/50 border-b py-1.5">
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <div className="hairline my-8" />
-              <p className="text-muted-foreground text-[11px] tracking-[0.24em] uppercase">
-                Ecosystem
-              </p>
-              <div className="mt-5 flex items-center gap-6">
-                <img
-                  src={umraverse.url}
-                  alt="UMRAVERSE® — Your Umrah Universe"
-                  className="w-full max-w-[9rem] shrink-0 object-contain"
-                  loading="lazy"
-                />
-                <p className="text-muted-foreground min-w-0 text-[13px] leading-relaxed">
-                  UMRAVERSE® is the Islamic travel and Umrah digital ecosystem in which UMRAIO®
-                  operates.
-                </p>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </Section>
-
 
       <Section>
         <div className="grid gap-6 lg:grid-cols-2">

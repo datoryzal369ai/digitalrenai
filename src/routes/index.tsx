@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
+import { BrandStack } from "@/components/site/BrandStack";
 import renaiCore from "@/assets/renai-core.png.asset.json";
 import umraverse from "@/assets/umraverse.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
@@ -511,105 +512,96 @@ function Home() {
 
       {/* UMRAIO FLAGSHIP */}
       <Section id="umraio">
-        <Reveal>
-          <p className="eyebrow">Our first vertical autonomous AI business executive</p>
-          <h2 className="mt-4 max-w-4xl text-3xl leading-[1.08] font-semibold text-balance sm:text-4xl md:text-5xl">
-            UMRAIO® — the autonomous AI business executive for modern Umrah agencies.
-          </h2>
-        </Reveal>
-        <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-sm" loading="lazy" />
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="flex flex-wrap gap-2">
-              {["Not a chatbot", "Not just a CRM", "Not just automation"].map((t) => (
-                <StatusTag key={t} tone="muted">
-                  {t}
-                </StatusTag>
-              ))}
-            </div>
-            <p className="mt-6 text-lg leading-relaxed">
-              An AI business operating layer designed to help an Umrah agency think, respond, execute
-              and grow.
+            <img
+              src={umraio.url}
+              alt="UMRAIO® — Autonomous AI Business Executive"
+              className="w-full max-w-[20rem] object-contain sm:max-w-[26rem]"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.32em] uppercase">
+              Autonomous AI Business Executive
             </p>
-            <ul className="text-muted-foreground mt-7 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
-              {[
-                "Capture and qualify leads",
-                "Respond faster, consistently",
-                "Understand customer intent",
-                "Automate WhatsApp conversations",
-                "Follow up prospects",
-                "Generate quotations",
-                "Support sales and marketing",
-                "Analyse business performance",
-                "Recommend next actions",
-                "Reduce repetitive operational work",
-              ].map((f) => (
-                <li key={f} className="border-border/50 border-b py-1.5">
-                  {f}
-                </li>
-              ))}
-            </ul>
+            <h2 className="mt-7 text-3xl leading-[1.06] font-semibold text-balance sm:text-4xl md:text-5xl">
+              Your AI workforce. Working 24/7.
+            </h2>
+            <p className="text-muted-foreground mt-5 max-w-md text-base leading-relaxed sm:text-lg">
+              Built to help Umrah agencies generate leads, respond faster, close sales and grow more
+              efficiently.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link
+                to="/platforms"
+                className="border-primary/50 text-primary hover:bg-primary/10 rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Explore UMRAIO®
+              </Link>
+              <Link
+                to="/contact"
+                className="border-border text-muted-foreground hover:text-foreground rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Request a Briefing
+              </Link>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="panel relative overflow-hidden p-7 sm:p-9">
+              <div className="core-glow pointer-events-none absolute inset-0 opacity-60" />
+              <div className="relative">
+                <p className="eyebrow">Capability Architecture</p>
+                <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                  {[
+                    ["Understand", "Customer intent and business context."],
+                    ["Respond", "Fast, contextual customer engagement."],
+                    ["Follow Up", "Intelligent lead nurturing and follow-up."],
+                    ["Execute", "Automated business workflows."],
+                    ["Analyse", "Business intelligence and recommendations."],
+                    ["Improve", "Evaluation and controlled learning."],
+                  ].map(([k, v], i) => (
+                    <div key={k} className="border-border/60 border-t pt-4">
+                      <p className="text-primary/70 font-display text-[11px] tracking-[0.2em]">
+                        {String(i + 1).padStart(2, "0")}
+                      </p>
+                      <p className="font-display mt-2 text-sm tracking-[0.16em] uppercase">{k}</p>
+                      <p className="text-muted-foreground mt-1.5 text-[13px] leading-relaxed">{v}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </Reveal>
         </div>
 
-        <Reveal delay={160}>
-          <div className="panel mt-14 p-6 sm:p-10">
-            <p className="eyebrow">UMRAIO Architecture</p>
-            <div className="mt-6 grid gap-4 lg:grid-cols-[220px_1fr]">
-              <div className="border-primary/40 bg-primary/5 flex items-center justify-center rounded-sm border p-6">
-                <span className="font-display text-primary tracking-[0.1em] uppercase">
-                  UMRAVERSE®
-                </span>
-              </div>
-              <div className="grid gap-2 sm:grid-cols-3">
-                {[
-                  "Umrah Knowledge",
-                  "Customer Context",
-                  "Agency Context",
-                  "Travel Context",
-                  "Operational Context",
-                ].map((c) => (
-                  <div
-                    key={c}
-                    className="border-border bg-surface-2/40 rounded-sm border px-4 py-3 text-[11px] tracking-[0.14em] uppercase"
-                  >
-                    {c}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
-            <div className="border-gold/40 bg-gold/5 text-gold font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
-              RÉNAI.CORE™
-            </div>
-            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
-            <div className="border-primary/40 bg-primary/10 text-primary font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
-              UMRAIO®
-            </div>
-            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
-            <div className="grid gap-2 sm:grid-cols-4 lg:grid-cols-7">
-              {[
-                "Sales",
-                "Marketing",
-                "Customer Experience",
-                "Operations",
-                "Analytics",
-                "Follow-up",
-                "Automation",
-              ].map((c) => (
-                <div
-                  key={c}
-                  className="border-border bg-surface-2/40 rounded-sm border px-3 py-3 text-center text-[10px] tracking-[0.14em] uppercase"
-                >
-                  {c}
-                </div>
-              ))}
-            </div>
+        <Reveal delay={140}>
+          <div className="hairline mt-16" />
+          <ul className="text-muted-foreground mt-8 grid gap-x-10 gap-y-3 text-[11px] tracking-[0.2em] uppercase sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              "More leads",
+              "Faster responses",
+              "Better follow-up",
+              "More sales opportunities",
+              "Less repetitive work",
+            ].map((s) => (
+              <li key={s} className="border-border/50 border-b pb-2">
+                {s}
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground/70 mt-6 text-xs">
+            Capabilities are designed to support agency performance. Outcomes depend on individual
+            business context.
+          </p>
+        </Reveal>
+
+        <Reveal delay={180}>
+          <div className="mt-24">
+            <BrandStack includeProduct={false} />
           </div>
         </Reveal>
       </Section>
+
 
       {/* PROBLEM / SOLUTION */}
       <Section id="problem-solution" className="border-border border-y">

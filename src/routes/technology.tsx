@@ -45,7 +45,26 @@ function Technology() {
               title="The Autonomous Intelligence Core."
               intro="An evolving intelligence layer designed to power vertical autonomous AI systems. RÉNAI.CORE™ is an Autonomous Intelligence Architecture — it is not a claim of artificial general intelligence."
             />
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a
+                href="https://renai-core.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
+              >
+                Explore RÉNAI.CORE™ →
+              </a>
+              <a
+                href="https://renai-core.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-border hover:border-primary/60 hover:text-primary inline-flex items-center rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                View the Intelligence Core
+              </a>
+            </div>
           </Reveal>
+
           <Reveal delay={120}>
             <CoreVisual className="mx-auto max-w-sm" />
           </Reveal>
@@ -126,6 +145,17 @@ function Technology() {
           Formal certifications and compliance attestations will be published only once obtained and
           verifiable.
         </p>
+        <div className="mt-10">
+          <a
+            href="https://renai-core.lovable.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
+          >
+            Discover RÉNAI.CORE™ →
+          </a>
+        </div>
+
       </Section>
     </>
   );

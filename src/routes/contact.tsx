@@ -103,9 +103,19 @@ function Contact() {
                   <span className="text-muted-foreground text-[10px] tracking-[0.18em] uppercase">
                     {k}
                   </span>
-                  <span className="text-right text-sm break-all">{v}</span>
+                  {v?.includes("@") ? (
+                    <a
+                      href={`mailto:${v}`}
+                      className="hover:text-primary text-right text-sm break-all transition-colors"
+                    >
+                      {v}
+                    </a>
+                  ) : (
+                    <span className="text-right text-sm break-all">{v}</span>
+                  )}
                 </div>
               ))}
+
             </div>
           </Reveal>
 

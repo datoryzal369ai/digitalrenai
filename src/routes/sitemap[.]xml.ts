@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+// Absolute URLs are derived from the incoming request origin so the sitemap
+// stays valid on preview, the Lovable domain and any custom domain.
+
 
 interface SitemapEntry {
   path: string;
@@ -13,8 +14,10 @@ interface SitemapEntry {
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
-      GET: async () => {
+      GET: async ({ request }) => {
+        const BASE_URL = new URL(request.url).origin;
         const entries: SitemapEntry[] = [
+
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/company", changefreq: "monthly", priority: "0.8" },
           { path: "/technology", changefreq: "monthly", priority: "0.9" },

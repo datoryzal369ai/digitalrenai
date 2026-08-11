@@ -72,32 +72,8 @@ function Company() {
         </div>
       </Section>
 
-      <Section className="border-border border-y">
-        <Reveal>
-          <SectionHead eyebrow="Leadership" title="Founder-led, architecture-first." />
-        </Reveal>
-        <Reveal delay={120}>
-          <div className="panel mt-12 max-w-2xl p-8">
-            <p className="font-display text-2xl">Dato&apos; Ryzal Jamaludin</p>
-            <p className="text-primary mt-2 text-[11px] tracking-[0.2em] uppercase">
-              Founder &amp; Executive Director
-            </p>
-            <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
-              Leads the company&apos;s intelligence architecture direction, vertical ecosystem
-              strategy and corporate development.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal delay={180}>
-          <div className="panel mt-6 max-w-2xl p-8">
-            <StatusTag tone="muted">Reserved</StatusTag>
-            <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-              Additional leadership, advisory and board profiles will be published as appointments are
-              confirmed. We do not list unconfirmed names, titles or affiliations.
-            </p>
-          </div>
-        </Reveal>
-      </Section>
+      <Leadership />
+
 
       <Section>
         <Reveal>

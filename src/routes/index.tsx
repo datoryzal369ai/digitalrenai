@@ -227,25 +227,30 @@ function Home() {
               serve people.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link
-                to="/technology"
+              <a
+                href={RENAI_CORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
               >
-                Explore Our Technology
-              </Link>
+                Explore RÉNAI.CORE™ →
+              </a>
+              <a
+                href={UMRAIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-primary/50 text-primary hover:bg-primary/10 inline-flex items-center rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Explore UMRAIO® →
+              </a>
               <Link
                 to="/investors"
-                className="border-border hover:border-primary/60 hover:text-primary inline-flex items-center rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
-              >
-                Investor & Strategic Partnership
-              </Link>
-              <Link
-                to="/contact"
                 className="text-muted-foreground hover:text-foreground inline-flex items-center text-[11px] tracking-[0.18em] uppercase underline underline-offset-8 transition-colors"
               >
-                View Company Profile
+                Investor & Partnerships
               </Link>
             </div>
+
           </div>
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <CoreVisual />

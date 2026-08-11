@@ -35,14 +35,6 @@ function Platforms() {
             intro="Each ecosystem carries the domain knowledge of its industry. Each autonomous AI business executive operates inside it, powered by RÉNAI.CORE™."
           />
         </Reveal>
-        <Reveal delay={140}>
-          <img
-            src={aiExecutives.url}
-            alt="Autonomous AI business executives across the Digital Renaissance ecosystems"
-            className="mt-14 w-full rounded-sm"
-            loading="lazy"
-          />
-        </Reveal>
       </Section>
 
       <Section className="border-border border-y">

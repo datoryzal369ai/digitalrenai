@@ -6,6 +6,7 @@ import drmLogo from "@/assets/drm-mark.png.asset.json";
 import renaiCore from "@/assets/renai-core-mark.png.asset.json";
 import umraverse from "@/assets/umraverse-mark.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
+import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
 
 import dashboard from "@/assets/renai-dashboard.png.asset.json";
 

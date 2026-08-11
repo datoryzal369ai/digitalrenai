@@ -188,7 +188,7 @@ function Home() {
               className="h-32 w-auto sm:h-40 lg:h-44"
               fetchPriority="high"
             />
-            <p className="eyebrow mt-8">Digital Renaissance Metaverse™</p>
+            <p className="eyebrow mt-8">Autonomous Intelligence Company</p>
             <h1 className="mt-5 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
               Building the autonomous intelligence economy.
             </h1>

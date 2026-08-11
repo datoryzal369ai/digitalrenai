@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
-import renaiCore from "@/assets/renai-core.png.asset.json";
+import renaiCore from "@/assets/renai-core-mark.png.asset.json";
 
 const title = "Technology — RÉNAI.CORE™ Autonomous Intelligence Architecture";
 const description =
@@ -95,7 +95,7 @@ function Technology() {
           <img
             src={renaiCore.url}
             alt="RÉNAI.CORE — The Autonomous Intelligence Core"
-            className="mt-14 w-full rounded-sm mix-blend-screen"
+            className="mt-14 w-full rounded-sm"
             loading="lazy"
           />
         </Reveal>

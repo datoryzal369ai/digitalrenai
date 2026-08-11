@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/drm-logo.png.asset.json";
+import logo from "@/assets/drm-mark.png.asset.json";
 
 const columns = [
   {
@@ -47,7 +47,7 @@ export function SiteFooter() {
             <img
               src={logo.url}
               alt="Digital Renaissance Metaverse logo"
-              className="h-24 w-auto mix-blend-screen sm:h-28"
+              className="h-24 w-auto sm:h-28"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">

@@ -10,6 +10,17 @@ import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
 
 import dashboard from "@/assets/renai-dashboard.png.asset.json";
 
+const UMRAIO_URL = "https://www.umraio.com";
+
+const umraioProductCapabilities = [
+  ["AI Conversation", "Understand and respond to customer enquiries."],
+  ["Lead Intelligence", "Identify customer intent and sales opportunities."],
+  ["Autonomous Follow-up", "Support consistent follow-up workflows."],
+  ["Business Execution", "Assist with operational tasks and workflows."],
+  ["Business Intelligence", "Surface insights and recommendations."],
+  ["Customer Experience", "Support faster and more consistent customer engagement."],
+];
+
 const title = "Digital Renaissance Metaverse™ — Autonomous Intelligence for the Real Economy";
 const description =
   "A Malaysian AI technology company building RÉNAI.CORE™, vertical AI platforms and autonomous AI business executives for Islamic travel, workforce and medical tourism ecosystems.";
@@ -654,29 +665,42 @@ function Home() {
         </Reveal>
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
-            <img
-              src={umraio.url}
-              alt="UMRAIO brand mark"
-              className="w-full max-w-[330px]"
-              loading="lazy"
-            />
-            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
-              Autonomous AI Business Executive
-            </p>
+            <div className="border-border/70 from-surface/60 to-background/80 relative overflow-hidden rounded-lg border bg-gradient-to-br p-6 sm:p-8">
+              <div className="grid-bg pointer-events-none absolute inset-0 opacity-30" />
+              <img
+                src={umraio.url}
+                alt="RAIO — the autonomous AI business executive identity of UMRAIO®"
+                className="relative mx-auto w-full max-w-[300px]"
+                loading="lazy"
+              />
+              <div className="relative mt-6 text-center">
+                <p className="font-display text-primary text-2xl tracking-[0.14em]">RAIO</p>
+                <p className="text-muted-foreground mt-1.5 text-[10px] tracking-[0.24em] uppercase">
+                  UMRAIO® · Autonomous AI Business Executive
+                </p>
+              </div>
+            </div>
             <div className="hairline mt-8" />
             <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.24em] uppercase">
-              Operating within
+              Powered by
+            </p>
+            <p className="text-gold font-display mt-2 text-sm tracking-[0.2em] uppercase">
+              RÉNAI.CORE™
+            </p>
+            <p className="text-muted-foreground mt-6 text-[10px] tracking-[0.24em] uppercase">
+              Part of
             </p>
             <img
               src={umraverse.url}
               alt="UMRAVERSE ecosystem brand mark"
-              className="mt-4 w-full max-w-[190px] opacity-70"
+              className="mt-3 w-full max-w-[150px] opacity-70"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">
               Islamic Travel &amp; Umrah Digital Ecosystem
             </p>
           </Reveal>
+
 
           <Reveal delay={120}>
             <div className="flex flex-wrap gap-2">

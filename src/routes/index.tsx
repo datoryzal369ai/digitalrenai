@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { TrendingUp, MessagesSquare, Workflow, BarChart3 } from "lucide-react";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
 import drmLogo from "@/assets/drm-mark.png.asset.json";
 import renaiCore from "@/assets/renai-core-mark.png.asset.json";
 import umraverse from "@/assets/umraverse-mark.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
-import aiExecutives from "@/assets/ai-executives.png.asset.json";
+import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
+
 import dashboard from "@/assets/renai-dashboard.png.asset.json";
 
 const title = "Digital Renaissance Metaverse™ — Autonomous Intelligence for the Real Economy";
@@ -121,16 +123,30 @@ const stackLayers = [
   ["08", "Governance & Observability", "Security, audit trails, human oversight and telemetry."],
 ];
 
-const platforms = [
+const umraioCapabilities = [
   {
-    name: "UMRAVERSE®",
-    domain: "Islamic Travel & Umrah Digital Ecosystem",
-    exec: "UMRAIO®",
-    execDesc: "Autonomous AI Business Executive for Modern Umrah Agencies",
-    status: "Flagship / Active Development",
-    tone: "cyan" as const,
-    image: umraverse.url,
+    icon: TrendingUp,
+    title: "AI Sales",
+    desc: "Lead intelligence, response and follow-up.",
   },
+  {
+    icon: MessagesSquare,
+    title: "AI Customer Experience",
+    desc: "Context-aware customer conversations and support.",
+  },
+  {
+    icon: Workflow,
+    title: "AI Operations",
+    desc: "Workflow automation and business execution.",
+  },
+  {
+    icon: BarChart3,
+    title: "AI Business Intelligence",
+    desc: "Analytics, recommendations and decision support.",
+  },
+];
+
+const futureVerticals = [
   {
     name: "WORVERSE®",
     domain: "Workforce & Employment Digital Ecosystem",
@@ -138,7 +154,6 @@ const platforms = [
     execDesc: "Autonomous AI Business Executive for Workforce Agencies",
     status: "Strategic Development",
     tone: "violet" as const,
-    image: null,
   },
   {
     name: "MEDIVERSE®",
@@ -147,9 +162,9 @@ const platforms = [
     execDesc: "Autonomous AI Business Executive for Medical Tourism",
     status: "Strategic Development",
     tone: "amber" as const,
-    image: null,
   },
 ];
+
 
 const problems = [
   "Slow response to inbound enquiries",
@@ -482,38 +497,121 @@ function Home() {
           <SectionHead
             eyebrow="AI Platform Portfolio"
             title="From one intelligence core to multiple industries."
+            intro="RÉNAI.CORE™ provides the intelligence architecture. Our vertical ecosystems provide the domain context. Autonomous AI executives turn that intelligence into business action."
           />
         </Reveal>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {platforms.map((p, i) => (
-            <Reveal key={p.name} delay={i * 100}>
-              <article className="panel flex h-full flex-col p-7">
-                <StatusTag tone={p.tone}>{p.status}</StatusTag>
-                <h3 className="font-display mt-6 text-2xl tracking-[0.04em]">{p.name}</h3>
-                <p className="text-muted-foreground mt-2 text-sm">{p.domain}</p>
-                <div className="hairline my-6" />
-                <p className="font-display text-primary text-lg">{p.exec}</p>
-                <p className="text-muted-foreground mt-2 text-sm">{p.execDesc}</p>
-                {p.image ? (
+
+        {/* FLAGSHIP — UMRAIO */}
+        <Reveal delay={80}>
+          <article className="panel mt-16 overflow-hidden">
+            <div className="grid gap-12 p-7 sm:p-10 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16 lg:p-14">
+              <div className="min-w-0">
+                <StatusTag tone="cyan">Flagship / Active Development</StatusTag>
+                <h3 className="font-display mt-7 text-4xl tracking-[0.02em] sm:text-5xl">UMRAIO®</h3>
+                <p className="text-muted-foreground mt-3 text-[11px] tracking-[0.22em] uppercase">
+                  Autonomous AI Business Executive for Modern Umrah Agencies
+                </p>
+                <p className="text-muted-foreground mt-6 leading-relaxed">
+                  An autonomous AI business layer designed to help modern Umrah agencies capture
+                  leads, respond faster, follow up prospects, support sales and marketing, automate
+                  repetitive workflows and improve business intelligence.
+                </p>
+                <Link
+                  to="/platforms"
+                  className="border-primary/50 text-primary hover:bg-primary/10 mt-9 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+                >
+                  Explore UMRAIO →
+                </Link>
+              </div>
+
+              {/* UMRAIO product identity visual */}
+              <div className="relative">
+                <div className="border-border/70 from-surface/70 to-background/80 relative overflow-hidden rounded-lg border bg-gradient-to-br p-8 sm:p-12">
+                  <div className="grid-bg pointer-events-none absolute inset-0 opacity-40" />
+                  <div
+                    className="core-glow animate-corepulse pointer-events-none absolute inset-0"
+                    aria-hidden="true"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="border-primary/15 animate-orbit pointer-events-none absolute top-1/2 left-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border"
+                  >
+                    <span className="bg-primary/70 absolute top-0 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full" />
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    className="border-primary/10 pointer-events-none absolute top-1/2 left-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border"
+                  />
                   <img
-                    src={p.image}
-                    alt={`${p.name} brand mark`}
-                    className="mt-auto w-full max-w-[200px] pt-8 opacity-75"
+                    src={umraioWordmark.url}
+                    alt="UMRAIO® brand mark"
+                    className="relative mx-auto w-full max-w-[420px]"
                     loading="lazy"
                   />
-                ) : null}
+
+                </div>
+
+                <div className="mt-8 flex items-center gap-5">
+                  <span className="text-muted-foreground shrink-0 text-[10px] tracking-[0.28em] uppercase">
+                    Part of
+                  </span>
+                  <span className="hairline" />
+                </div>
+                <div className="mt-4 flex min-w-0 flex-wrap items-center gap-x-6 gap-y-2">
+                  <img
+                    src={umraverse.url}
+                    alt="UMRAVERSE® ecosystem brand mark"
+                    className="w-full max-w-[120px] opacity-70"
+                    loading="lazy"
+                  />
+                  <p className="text-muted-foreground min-w-0 text-[10px] tracking-[0.2em] uppercase">
+                    Islamic Travel &amp; Umrah Digital Ecosystem
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CAPABILITIES */}
+            <div className="border-border/70 grid border-t sm:grid-cols-2 lg:grid-cols-4">
+              {umraioCapabilities.map(({ icon: Icon, title: t, desc }) => (
+                <div
+                  key={t}
+                  className="border-border/70 border-b p-7 last:border-b-0 sm:border-r sm:last:border-r-0 lg:border-b-0"
+                >
+                  <Icon className="text-primary h-5 w-5" strokeWidth={1.25} aria-hidden="true" />
+                  <h4 className="mt-5 text-[11px] tracking-[0.18em] uppercase">{t}</h4>
+                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </Reveal>
+
+        {/* FUTURE VERTICALS */}
+        <p className="text-muted-foreground mt-16 text-[10px] tracking-[0.28em] uppercase">
+          Future verticals
+        </p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          {futureVerticals.map((p, i) => (
+            <Reveal key={p.name} delay={i * 100}>
+              <article className="panel flex h-full flex-col p-8">
+                <StatusTag tone={p.tone}>{p.status}</StatusTag>
+                <p className="text-muted-foreground mt-6 text-[10px] tracking-[0.24em] uppercase">
+                  Ecosystem
+                </p>
+                <h3 className="font-display mt-2 text-xl tracking-[0.04em]">{p.name}</h3>
+                <p className="text-muted-foreground mt-1.5 text-sm">{p.domain}</p>
+                <div className="hairline my-6" />
+                <p className="text-muted-foreground text-[10px] tracking-[0.24em] uppercase">
+                  Autonomous AI Business Executive
+                </p>
+                <p className="font-display text-primary mt-2 text-2xl">{p.exec}</p>
+                <p className="text-muted-foreground mt-2 text-sm">{p.execDesc}</p>
               </article>
             </Reveal>
           ))}
         </div>
-        <Reveal delay={200}>
-          <img
-            src={aiExecutives.url}
-            alt="RAIO, ORIO and EDIO — autonomous AI business executives across the Digital Renaissance ecosystems"
-            className="mt-10 w-full rounded-sm"
-            loading="lazy"
-          />
-        </Reveal>
+
       </Section>
 
       {/* UMRAIO FLAGSHIP */}

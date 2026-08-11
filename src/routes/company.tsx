@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Reveal, Section, SectionHead, StatusTag } from "@/components/site/primitives";
+import { Reveal, Section, SectionHead } from "@/components/site/primitives";
+import { Leadership } from "@/components/site/Leadership";
+
 
 const title = "Company — Digital Renaissance Metaverse™";
 const description =

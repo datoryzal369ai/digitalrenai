@@ -1,24 +1,969 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
+import { CoreVisual } from "@/components/site/CoreVisual";
+import renaiCore from "@/assets/renai-core.png.asset.json";
+import umraverse from "@/assets/umraverse.png.asset.json";
+import umraio from "@/assets/umraio.png.asset.json";
+import aiExecutives from "@/assets/ai-executives.png.asset.json";
+import dashboard from "@/assets/renai-dashboard.png.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Digital Renaissance Metaverse™ — Autonomous Intelligence for the Real Economy";
+const description =
+  "A Malaysian AI technology company building RÉNAI.CORE™, vertical AI platforms and autonomous AI business executives for Islamic travel, workforce and medical tourism ecosystems.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Home,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "/#organization",
+              name: "Digital Renaissance Metaverse",
+              alternateName: "DRM",
+              description,
+              foundingLocation: { "@type": "Country", name: "Malaysia" },
+              areaServed: ["Malaysia", "ASEAN", "GCC", "MENA"],
+              knowsAbout: [
+                "Autonomous intelligence architecture",
+                "Vertical AI platforms",
+                "AI agents and orchestration",
+                "AI governance",
+              ],
+              founder: {
+                "@type": "Person",
+                "@id": "/#founder",
+                name: "Dato' Ryzal Jamaludin",
+                jobTitle: "Founder & Executive Director",
+              },
+            },
+            {
+              "@type": "Product",
+              name: "RÉNAI.CORE™",
+              description:
+                "The Autonomous Intelligence Core: a modular intelligence architecture for contextual reasoning, memory, orchestration, evaluation and governed autonomous execution. Under development.",
+              brand: { "@id": "/#organization" },
+            },
+            {
+              "@type": "Product",
+              name: "UMRAIO®",
+              description:
+                "Autonomous AI Business Executive for modern Umrah agencies, operating within the UMRAVERSE® ecosystem. Flagship product in active development.",
+              brand: { "@id": "/#organization" },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What is Digital Renaissance Metaverse?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Digital Renaissance Metaverse is a Malaysian-born AI technology company building autonomous intelligence systems, vertical AI platforms and digital ecosystems for businesses and society.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is RÉNAI.CORE™?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "RÉNAI.CORE™ is the company's autonomous intelligence architecture — a modular intelligence layer for context, reasoning, memory, orchestration, evaluation and governed execution. It is not a claim of AGI.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What is UMRAIO®?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "UMRAIO® is the company's first vertical Autonomous AI Business Executive, designed for modern Umrah agencies within the UMRAVERSE® ecosystem.",
+                  },
+                },
+              ],
+            },
+          ],
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const snapshot = [
+  { k: "Malaysia", v: "Technology Origin" },
+  { k: "AI", v: "Core Technology" },
+  { k: "Vertical AI", v: "Domain Intelligence" },
+  { k: "Autonomous Systems", v: "Product Architecture" },
+  { k: "Global", v: "Expansion Vision" },
+];
+
+const stackLayers = [
+  ["01", "Data & Context", "Structured and unstructured business signal, normalised for reasoning."],
+  ["02", "Knowledge Graph", "Domain knowledge, entities and relationships per vertical."],
+  ["03", "Memory & Experience", "Working, episodic and semantic memory across operations."],
+  ["04", "Reasoning & Decision", "Multi-perspective reasoning under explicit objectives."],
+  ["05", "Agent & Tool Orchestration", "Task decomposition, routing and tool execution."],
+  ["06", "Autonomous Execution", "Bounded execution of workflows with permission controls."],
+  ["07", "Evaluation & Learning", "Benchmarking, outcome scoring and controlled improvement."],
+  ["08", "Governance & Observability", "Security, audit trails, human oversight and telemetry."],
+];
+
+const platforms = [
+  {
+    name: "UMRAVERSE®",
+    domain: "Islamic Travel & Umrah Digital Ecosystem",
+    exec: "UMRAIO®",
+    execDesc: "Autonomous AI Business Executive for Modern Umrah Agencies",
+    status: "Flagship / Active Development",
+    tone: "cyan" as const,
+    image: umraverse.url,
+  },
+  {
+    name: "WORVERSE®",
+    domain: "Workforce & Employment Digital Ecosystem",
+    exec: "WORIO®",
+    execDesc: "Autonomous AI Business Executive for Workforce Agencies",
+    status: "Strategic Development",
+    tone: "violet" as const,
+    image: null,
+  },
+  {
+    name: "MEDIVERSE®",
+    domain: "Medical Tourism & Healthcare Digital Ecosystem",
+    exec: "MEDIO®",
+    execDesc: "Autonomous AI Business Executive for Medical Tourism",
+    status: "Strategic Development",
+    tone: "amber" as const,
+    image: null,
+  },
+];
+
+const problems = [
+  "Slow response to inbound enquiries",
+  "Missed and unqualified leads",
+  "Inconsistent follow-up",
+  "Fragmented customer information",
+  "Manual quotation processes",
+  "Repetitive WhatsApp workload",
+  "Limited sales visibility",
+  "Marketing inefficiency",
+  "Heavy staff dependency",
+  "Operational fragmentation",
+];
+
+const differentiation = [
+  ["Generic CRM", "—", "—", "—", "—"],
+  ["AI Chatbot", "Partial", "—", "—", "—"],
+  ["AI Assistant", "Partial", "Partial", "—", "—"],
+  ["AI Agent", "Partial", "Partial", "Partial", "—"],
+  ["Vertical AI", "Yes", "Partial", "Partial", "Partial"],
+  ["Digital Renaissance Architecture", "Yes", "Yes", "Yes", "Yes"],
+];
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      {/* HERO */}
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16">
+        <div className="grid-bg absolute inset-0 opacity-40" />
+        <div className="from-background absolute inset-0 bg-gradient-to-b via-transparent to-[var(--background)]" />
+        <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="animate-rise">
+            <p className="eyebrow">Digital Renaissance Metaverse™</p>
+            <h1 className="mt-6 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
+              Building the autonomous intelligence economy.
+            </h1>
+            <p className="text-muted-foreground mt-6 max-w-xl text-base leading-relaxed sm:text-lg">
+              Digital Renaissance Metaverse builds AI intelligence systems, vertical AI platforms and
+              autonomous digital executives designed to transform how businesses operate, grow and
+              serve people.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                to="/technology"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
+              >
+                Explore Our Technology
+              </Link>
+              <Link
+                to="/investors"
+                className="border-border hover:border-primary/60 hover:text-primary inline-flex items-center rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Investor & Strategic Partnership
+              </Link>
+              <Link
+                to="/contact"
+                className="text-muted-foreground hover:text-foreground inline-flex items-center text-[11px] tracking-[0.18em] uppercase underline underline-offset-8 transition-colors"
+              >
+                View Company Profile
+              </Link>
+            </div>
+          </div>
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <CoreVisual />
+          </div>
+        </div>
+      </section>
+
+      {/* SNAPSHOT */}
+      <div className="border-border border-y">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px px-5 sm:px-8 md:grid-cols-5">
+          {snapshot.map((s, i) => (
+            <Reveal key={s.k} delay={i * 70}>
+              <div className="border-border/60 px-2 py-7 md:border-l md:first:border-l-0 md:px-6">
+                <p className="font-display text-base tracking-[0.1em] uppercase">{s.k}</p>
+                <p className="text-muted-foreground mt-2 text-[11px] tracking-[0.16em] uppercase">
+                  {s.v}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      {/* WHO WE ARE */}
+      <Section id="who-we-are">
+        <Reveal>
+          <SectionHead
+            eyebrow="Who We Are"
+            title="We are building what comes after software."
+            intro="Traditional software waits for humans to operate it. Digital Renaissance is building systems where intelligence understands context, reasons over business information, recommends action, executes workflows and learns from outcomes — inside controlled governance."
+          />
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="mt-14 grid gap-px md:grid-cols-3">
+            {[
+              ["Understand & reason", "Context, domain knowledge and business memory inform every decision path."],
+              ["Recommend & execute", "Bounded autonomy across real operational workflows, not isolated chat."],
+              ["Evaluate & improve", "Outcomes are scored, and improvement is deliberate and controlled."],
+            ].map(([h, p]) => (
+              <div key={h} className="panel p-7">
+                <h3 className="text-lg font-medium">{h}</h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="mt-10">
+            <p className="eyebrow mb-4">The Trajectory</p>
+            <FlowChain
+              steps={[
+                "Software",
+                "AI Assistants",
+                "AI Agents",
+                "Autonomous AI Executives",
+                "Autonomous Intelligence Ecosystems",
+              ]}
+            />
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* VISION */}
+      <Section id="vision" className="border-border border-y">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1fr]">
+          <Reveal>
+            <SectionHead eyebrow="Our Vision" title="Reimagine. Rebuild. Redefine." />
+            <p className="text-muted-foreground mt-6 leading-relaxed">
+              To build a new generation of intelligent digital ecosystems where autonomous
+              intelligence augments human capability, accelerates businesses and creates meaningful
+              economic and social impact.
+            </p>
+            <p className="text-muted-foreground mt-4 leading-relaxed">
+              <span className="text-foreground">Mission — </span>
+              To develop proprietary AI systems, vertical intelligence platforms and autonomous
+              digital executives that solve real-world problems across high-value industries.
+            </p>
+          </Reveal>
+          <Reveal delay={140}>
+            <div className="space-y-px">
+              {[
+                ["Reimagine", "Challenge conventional systems."],
+                ["Rebuild", "Engineer intelligent infrastructure."],
+                ["Redefine", "Create new economic and human possibilities."],
+              ].map(([h, p], i) => (
+                <div key={h} className="panel flex items-baseline gap-6 p-7">
+                  <span className="text-gold/70 font-display text-sm">0{i + 1}</span>
+                  <div>
+                    <h3 className="font-display text-xl tracking-[0.06em] uppercase">{h}</h3>
+                    <p className="text-muted-foreground mt-2 text-sm">{p}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* BRAND ARCHITECTURE */}
+      <Section id="architecture">
+        <Reveal>
+          <SectionHead
+            eyebrow="Brand & System Architecture"
+            title="One intelligence core. Multiple ecosystems. Autonomous execution."
+            align="center"
+          />
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="mt-14 space-y-3 text-center">
+            {[
+              { label: "Digital Renaissance Metaverse™", sub: "Parent Technology Company", tone: "gold" },
+              { label: "RÉNAI.CORE™", sub: "The Autonomous Intelligence Core", tone: "cyan" },
+              {
+                label: "UMRAVERSE® · WORVERSE® · MEDIVERSE®",
+                sub: "Vertical Digital Ecosystems",
+                tone: "platinum",
+              },
+              {
+                label: "UMRAIO® · WORIO® · MEDIO®",
+                sub: "Autonomous AI Business Executives",
+                tone: "cyan",
+              },
+              { label: "Business & Customer Outcomes", sub: "Real economy impact", tone: "platinum" },
+            ].map((row, i, arr) => (
+              <div key={row.label}>
+                <div
+                  className={`panel mx-auto max-w-3xl px-6 py-6 ${
+                    row.tone === "gold"
+                      ? "border-gold/40"
+                      : row.tone === "cyan"
+                        ? "border-primary/40"
+                        : ""
+                  }`}
+                >
+                  <p
+                    className={`font-display text-base tracking-[0.08em] uppercase sm:text-lg ${
+                      row.tone === "gold" ? "text-gold" : row.tone === "cyan" ? "text-primary" : ""
+                    }`}
+                  >
+                    {row.label}
+                  </p>
+                  <p className="text-muted-foreground mt-2 text-[11px] tracking-[0.2em] uppercase">
+                    {row.sub}
+                  </p>
+                </div>
+                {i < arr.length - 1 ? (
+                  <div className="bg-primary/40 mx-auto my-3 h-6 w-px" />
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* RÉNAI.CORE */}
+      <Section id="renai-core" className="border-border border-y">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <Reveal>
+            <img
+              src={renaiCore.url}
+              alt="RÉNAI.CORE — The Autonomous Intelligence Core"
+              className="w-full rounded-sm"
+              loading="lazy"
+            />
+          </Reveal>
+          <Reveal delay={120}>
+            <SectionHead
+              eyebrow="RÉNAI.CORE™"
+              title="The intelligence layer behind our ecosystems."
+              intro="An evolving intelligence layer designed to power vertical autonomous AI systems — an Autonomous Intelligence Architecture, not a claim of AGI."
+            />
+            <ul className="text-muted-foreground mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm">
+              {[
+                "Contextual reasoning",
+                "Domain knowledge",
+                "Business intelligence",
+                "Memory",
+                "Workflow orchestration",
+                "Decision support",
+                "Tool execution",
+                "Evaluation",
+                "Controlled learning",
+                "Experience capture",
+                "Governance",
+                "Observability",
+              ].map((c) => (
+                <li key={c} className="border-border/50 border-b py-1.5">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        <Reveal delay={160}>
+          <div className="panel mt-16 p-6 sm:p-10">
+            <p className="eyebrow">Intelligence Loop</p>
+            <div className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                "Data",
+                "Domain Knowledge",
+                "Context",
+                "Reasoning",
+                "Decision",
+                "Action",
+                "Observation",
+                "Evaluation",
+                "Experience",
+                "Controlled Learning",
+                "Improvement",
+              ].map((s, i) => (
+                <div
+                  key={s}
+                  className="border-border bg-surface-2/40 flex items-center gap-3 rounded-sm border px-4 py-3"
+                >
+                  <span className="text-primary/60 text-[10px]">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-[12px] tracking-[0.12em] uppercase">{s}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 grid gap-2 sm:grid-cols-4">
+              {["Security", "Governance", "Human Oversight", "Auditability"].map((c) => (
+                <div
+                  key={c}
+                  className="border-gold/30 bg-gold/5 text-gold rounded-sm border px-4 py-3 text-center text-[11px] tracking-[0.16em] uppercase"
+                >
+                  {c}
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground mt-6 text-xs">
+              Horizontal control layers apply across every stage of the loop.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* TECHNOLOGY STACK */}
+      <Section id="stack">
+        <Reveal>
+          <SectionHead
+            eyebrow="Technology Stack"
+            title="A modular intelligence architecture — not a single AI model."
+            intro="RÉNAI.CORE™ is designed in layers so that reasoning, memory, execution and governance can evolve independently and be reused across every vertical ecosystem."
+          />
+        </Reveal>
+        <div className="mt-14 space-y-px">
+          {stackLayers.map(([n, h, p], i) => (
+            <Reveal key={h} delay={i * 50}>
+              <div className="panel grid gap-3 p-6 sm:grid-cols-[64px_240px_1fr] sm:items-center sm:gap-6">
+                <span className="text-primary/70 font-display text-sm">{n}</span>
+                <h3 className="font-display text-sm tracking-[0.14em] uppercase">{h}</h3>
+                <p className="text-muted-foreground text-sm">{p}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* PORTFOLIO */}
+      <Section id="platforms" className="border-border border-y">
+        <Reveal>
+          <SectionHead
+            eyebrow="AI Platform Portfolio"
+            title="From one intelligence core to multiple industries."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {platforms.map((p, i) => (
+            <Reveal key={p.name} delay={i * 100}>
+              <article className="panel flex h-full flex-col p-7">
+                <StatusTag tone={p.tone}>{p.status}</StatusTag>
+                <h3 className="font-display mt-6 text-2xl tracking-[0.04em]">{p.name}</h3>
+                <p className="text-muted-foreground mt-2 text-sm">{p.domain}</p>
+                <div className="hairline my-6" />
+                <p className="font-display text-primary text-lg">{p.exec}</p>
+                <p className="text-muted-foreground mt-2 text-sm">{p.execDesc}</p>
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.name} brand mark`}
+                    className="mt-auto pt-7"
+                    loading="lazy"
+                  />
+                ) : null}
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={200}>
+          <img
+            src={aiExecutives.url}
+            alt="RAIO, ORIO and EDIO — autonomous AI business executives across the Digital Renaissance ecosystems"
+            className="mt-10 w-full rounded-sm"
+            loading="lazy"
+          />
+        </Reveal>
+      </Section>
+
+      {/* UMRAIO FLAGSHIP */}
+      <Section id="umraio">
+        <Reveal>
+          <p className="eyebrow">Our first vertical autonomous AI business executive</p>
+          <h2 className="mt-4 max-w-4xl text-3xl leading-[1.08] font-semibold text-balance sm:text-4xl md:text-5xl">
+            UMRAIO® — the autonomous AI business executive for modern Umrah agencies.
+          </h2>
+        </Reveal>
+        <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <Reveal>
+            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-sm" loading="lazy" />
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="flex flex-wrap gap-2">
+              {["Not a chatbot", "Not just a CRM", "Not just automation"].map((t) => (
+                <StatusTag key={t} tone="muted">
+                  {t}
+                </StatusTag>
+              ))}
+            </div>
+            <p className="mt-6 text-lg leading-relaxed">
+              An AI business operating layer designed to help an Umrah agency think, respond, execute
+              and grow.
+            </p>
+            <ul className="text-muted-foreground mt-7 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
+              {[
+                "Capture and qualify leads",
+                "Respond faster, consistently",
+                "Understand customer intent",
+                "Automate WhatsApp conversations",
+                "Follow up prospects",
+                "Generate quotations",
+                "Support sales and marketing",
+                "Analyse business performance",
+                "Recommend next actions",
+                "Reduce repetitive operational work",
+              ].map((f) => (
+                <li key={f} className="border-border/50 border-b py-1.5">
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        <Reveal delay={160}>
+          <div className="panel mt-14 p-6 sm:p-10">
+            <p className="eyebrow">UMRAIO Architecture</p>
+            <div className="mt-6 grid gap-4 lg:grid-cols-[220px_1fr]">
+              <div className="border-primary/40 bg-primary/5 flex items-center justify-center rounded-sm border p-6">
+                <span className="font-display text-primary tracking-[0.1em] uppercase">
+                  UMRAVERSE®
+                </span>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-3">
+                {[
+                  "Umrah Knowledge",
+                  "Customer Context",
+                  "Agency Context",
+                  "Travel Context",
+                  "Operational Context",
+                ].map((c) => (
+                  <div
+                    key={c}
+                    className="border-border bg-surface-2/40 rounded-sm border px-4 py-3 text-[11px] tracking-[0.14em] uppercase"
+                  >
+                    {c}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
+            <div className="border-gold/40 bg-gold/5 text-gold font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
+              RÉNAI.CORE™
+            </div>
+            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
+            <div className="border-primary/40 bg-primary/10 text-primary font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
+              UMRAIO®
+            </div>
+            <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
+            <div className="grid gap-2 sm:grid-cols-4 lg:grid-cols-7">
+              {[
+                "Sales",
+                "Marketing",
+                "Customer Experience",
+                "Operations",
+                "Analytics",
+                "Follow-up",
+                "Automation",
+              ].map((c) => (
+                <div
+                  key={c}
+                  className="border-border bg-surface-2/40 rounded-sm border px-3 py-3 text-center text-[10px] tracking-[0.14em] uppercase"
+                >
+                  {c}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* PROBLEM / SOLUTION */}
+      <Section id="problem-solution" className="border-border border-y">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <Reveal>
+            <p className="eyebrow">The Problem</p>
+            <h3 className="mt-4 text-2xl font-semibold sm:text-3xl">
+              Modern agencies lose value in the gaps between systems.
+            </h3>
+            <ul className="mt-7 space-y-2.5">
+              {problems.map((p) => (
+                <li
+                  key={p}
+                  className="text-muted-foreground border-border/60 flex items-start gap-3 border-b pb-2.5 text-sm"
+                >
+                  <span className="text-destructive/80 mt-0.5 text-xs">✕</span>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={140}>
+            <p className="eyebrow">The Solution</p>
+            <h3 className="mt-4 text-2xl font-semibold sm:text-3xl">
+              An intelligent business layer that closes the loop.
+            </h3>
+            <div className="mt-7 space-y-3">
+              {[
+                ["Understand", "Interpret intent, context and history across every channel."],
+                ["Reason", "Weigh options against agency objectives and constraints."],
+                ["Recommend", "Surface the next best commercial action with rationale."],
+                ["Execute", "Run the workflow — quotation, reply, task, follow-up."],
+                ["Follow Up", "Persist through the sales cycle without human reminders."],
+                ["Learn", "Score outcomes and improve inside governance boundaries."],
+              ].map(([h, p], i) => (
+                <div key={h} className="panel flex items-start gap-5 p-5">
+                  <span className="text-primary/70 font-display text-xs">0{i + 1}</span>
+                  <div>
+                    <p className="font-display text-sm tracking-[0.14em] uppercase">{h}</p>
+                    <p className="text-muted-foreground mt-1.5 text-sm">{p}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* AUTONOMOUS EXECUTIVE MODEL */}
+      <Section id="model">
+        <Reveal>
+          <SectionHead
+            eyebrow="Autonomous AI Executive Model"
+            title="The difference is where the intelligence sits."
+          />
+        </Reveal>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {[
+            { t: "Traditional SaaS", steps: ["Human", "Software", "Action"], tone: "muted" },
+            {
+              t: "AI Assistant",
+              steps: ["Human", "AI", "Recommendation", "Human Action"],
+              tone: "muted",
+            },
+            {
+              t: "Autonomous AI Executive",
+              steps: [
+                "Business Context",
+                "RÉNAI.CORE",
+                "Reason",
+                "Decide",
+                "Execute",
+                "Observe",
+                "Evaluate",
+                "Improve",
+              ],
+              tone: "cyan",
+            },
+          ].map((c, i) => (
+            <Reveal key={c.t} delay={i * 110}>
+              <div
+                className={`panel h-full p-7 ${c.tone === "cyan" ? "border-primary/40" : ""}`}
+              >
+                <h3
+                  className={`font-display text-sm tracking-[0.16em] uppercase ${c.tone === "cyan" ? "text-primary" : "text-muted-foreground"}`}
+                >
+                  {c.t}
+                </h3>
+                <ol className="mt-6 space-y-2">
+                  {c.steps.map((s) => (
+                    <li
+                      key={s}
+                      className="border-border bg-surface-2/40 rounded-sm border px-4 py-2.5 text-[11px] tracking-[0.14em] uppercase"
+                    >
+                      {s}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* SYSTEM PROOF */}
+      <Section id="proof" className="border-border border-y">
+        <Reveal>
+          <SectionHead
+            eyebrow="System Proof"
+            title="See the intelligence in action."
+            intro="Interface previews from our development environment. All screens are prototypes shown for demonstration purposes and do not represent customer data or commercial results."
+          />
+        </Reveal>
+        <Reveal delay={120}>
+          <figure className="panel mt-12 overflow-hidden">
+            <img
+              src={dashboard.url}
+              alt="RÉNAI.CORE Meta-Intelligence Command Center prototype interface"
+              className="w-full"
+              loading="lazy"
+            />
+            <figcaption className="text-muted-foreground border-border border-t px-5 py-4 text-[11px] tracking-[0.16em] uppercase">
+              RÉNAI.CORE™ Command Center — Prototype interface, in development
+            </figcaption>
+          </figure>
+        </Reveal>
+        <Reveal delay={180}>
+          <div className="mt-8 grid gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            {[
+              "AI Executive Dashboard",
+              "Lead Intelligence",
+              "WhatsApp AI Executive",
+              "Customer Intent Detection",
+              "Follow-up Engine",
+              "AI Marketing Executive",
+              "Quotation Generator",
+              "Business Analytics",
+              "AI Recommendations",
+              "Activity Log",
+              "Knowledge Base",
+              "Autonomous Workflow",
+            ].map((m) => (
+              <div
+                key={m}
+                className="border-border bg-surface/40 flex items-center justify-between gap-3 rounded-sm border px-4 py-3"
+              >
+                <span className="text-[11px] tracking-[0.12em] uppercase">{m}</span>
+                <span className="text-muted-foreground text-[9px] tracking-[0.16em] uppercase">
+                  Prototype
+                </span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* BUSINESS MODEL + MARKET */}
+      <Section id="business">
+        <div className="grid gap-14 lg:grid-cols-2">
+          <Reveal>
+            <SectionHead eyebrow="Business Model" title="A layered revenue architecture." />
+            <ul className="mt-8 space-y-px">
+              {[
+                "SaaS subscriptions",
+                "AI executive subscriptions",
+                "Enterprise licensing",
+                "Transaction / marketplace revenue",
+                "API / platform usage",
+                "Vertical ecosystem commissions",
+                "Strategic partnerships",
+                "Enterprise implementation",
+              ].map((r, i) => (
+                <li key={r} className="panel flex items-center gap-5 px-5 py-3.5 text-sm">
+                  <span className="text-gold/70 text-xs">{String(i + 1).padStart(2, "0")}</span>
+                  {r}
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground mt-6 text-xs">
+              Framework only. No financial projections are presented; figures will be published when
+              verified.
+            </p>
+            <div className="mt-6">
+              <FlowChain
+                dense
+                steps={[
+                  "Land",
+                  "Product-Market Fit",
+                  "Recurring Revenue",
+                  "Vertical Expansion",
+                  "Cross-Ecosystem Scale",
+                  "Regional Expansion",
+                ]}
+              />
+            </div>
+          </Reveal>
+
+          <Reveal delay={140}>
+            <SectionHead eyebrow="Market Opportunity" title="Vertical depth before horizontal reach." />
+            <div className="mt-8 space-y-3">
+              {[
+                ["Initial vertical", "Islamic Travel & Umrah"],
+                ["Expansion", "Workforce & Employment"],
+                ["Expansion", "Medical Tourism & Healthcare"],
+                ["Long-term", "Additional vertical intelligence markets"],
+              ].map(([k, v]) => (
+                <div key={v} className="panel flex items-baseline justify-between gap-4 px-5 py-4">
+                  <span className="text-muted-foreground text-[10px] tracking-[0.18em] uppercase">
+                    {k}
+                  </span>
+                  <span className="text-sm">{v}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <p className="eyebrow mb-4">Geographic Strategy</p>
+              <FlowChain steps={["Malaysia", "ASEAN", "GCC / MENA", "Global"]} />
+            </div>
+            <div className="panel mt-8 p-6">
+              <p className="text-[11px] tracking-[0.2em] uppercase">Market Intelligence Module</p>
+              <p className="text-muted-foreground mt-3 text-sm">
+                Reserved for verified market research. TAM / SAM / SOM figures will be published only
+                with cited, verifiable sources.
+              </p>
+              <StatusTag tone="muted">
+                <span className="mt-2 inline-block">Subject to validation</span>
+              </StatusTag>
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* WHY NOW */}
+      <Section id="why-now" className="border-border border-y">
+        <Reveal>
+          <SectionHead
+            eyebrow="Why Now"
+            title="The shift from software to autonomous intelligence."
+            align="center"
+          />
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="mt-12 flex justify-center">
+            <FlowChain
+              steps={[
+                "Cloud",
+                "Mobile",
+                "SaaS",
+                "Generative AI",
+                "AI Agents",
+                "Autonomous AI Systems",
+              ]}
+            />
+          </div>
+        </Reveal>
+        <Reveal delay={180}>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["AI", "Frontier model capability is now production-viable."],
+              ["Industry Knowledge", "Depth in a vertical is the durable advantage."],
+              ["Digital Ecosystems", "Distribution and data compound together."],
+              ["Autonomous Execution", "Value moves from advice to completed work."],
+            ].map(([h, p]) => (
+              <div key={h} className="panel p-6">
+                <h3 className="font-display text-primary text-sm tracking-[0.14em] uppercase">{h}</h3>
+                <p className="text-muted-foreground mt-3 text-sm">{p}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* DIFFERENTIATION */}
+      <Section id="differentiation">
+        <Reveal>
+          <SectionHead
+            eyebrow="Strategic Positioning"
+            title="Vertical + contextual + autonomous + governed."
+          />
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="mt-12 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[680px] border-collapse text-sm">
+              <thead>
+                <tr className="text-muted-foreground text-[10px] tracking-[0.16em] uppercase">
+                  <th className="border-border border-b px-4 py-4 text-left">Category</th>
+                  {["Domain Context", "Business Memory", "Workflow Execution", "Governed Learning"].map(
+                    (h) => (
+                      <th key={h} className="border-border border-b px-4 py-4 text-left">
+                        {h}
+                      </th>
+                    ),
+                  )}
+                </tr>
+              </thead>
+              <tbody>
+                {differentiation.map((row, i) => (
+                  <tr
+                    key={row[0]}
+                    className={i === differentiation.length - 1 ? "text-primary" : ""}
+                  >
+                    {row.map((cell, j) => (
+                      <td
+                        key={j}
+                        className="border-border/50 border-b px-4 py-3.5 whitespace-nowrap"
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Reveal>
+        <p className="text-muted-foreground mt-6 text-xs">
+          Category-level comparison of architectural approaches, not an assessment of any named
+          product or company.
+        </p>
+      </Section>
+
+      {/* FINAL CTA */}
+      <section className="relative flex min-h-[85svh] items-center overflow-hidden px-5 py-24 sm:px-8">
+        <div className="grid-bg absolute inset-0 opacity-30" />
+        <div className="core-glow absolute inset-0" />
+        <div className="relative mx-auto max-w-4xl text-center">
+          <Reveal>
+            <h2 className="text-3xl leading-[1.06] font-semibold text-balance sm:text-5xl">
+              The next era of digital intelligence is being built now.
+            </h2>
+            <p className="text-muted-foreground mx-auto mt-6 max-w-2xl leading-relaxed">
+              Digital Renaissance Metaverse is building intelligent systems for a world where
+              technology does more than assist — it understands, adapts and executes.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
+              <Link
+                to="/contact"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm px-7 py-4 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
+              >
+                Start a Strategic Conversation
+              </Link>
+              <Link
+                to="/investors"
+                className="border-border hover:border-primary/60 rounded-sm border px-7 py-4 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Request Company Profile
+              </Link>
+            </div>
+            <p className="text-gold mt-14 text-[11px] tracking-[0.35em] uppercase">
+              Reimagine • Rebuild • Redefine
+            </p>
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 }

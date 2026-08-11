@@ -3,42 +3,41 @@ import logo from "@/assets/drm-mark.png.asset.json";
 
 const columns = [
   {
-    title: "Company",
-    links: [
-      { label: "Who We Are", to: "/company" },
-      { label: "Leadership", to: "/company" },
-      { label: "Corporate Information", to: "/company" },
-      { label: "Careers", to: "/contact" },
-    ],
-  },
-  {
     title: "Technology",
     links: [
-      { label: "RÉNAI.CORE™", to: "/technology" },
-      { label: "Technology Stack", to: "/technology" },
+      { label: "RÉNAI.CORE™", href: "https://renai-core.lovable.app" },
+      { label: "Technology Overview", to: "/technology" },
       { label: "AI Governance", to: "/technology" },
     ],
   },
   {
     title: "Platforms",
     links: [
-      { label: "UMRAVERSE® Ecosystem", to: "/platforms" },
-      { label: "UMRAIO® Product Site", href: "https://www.umraio.com" },
+      { label: "UMRAVERSE®", to: "/platforms" },
+      { label: "UMRAIO®", href: "https://www.umraio.com" },
       { label: "WORVERSE® / WORIO®", to: "/platforms" },
       { label: "MEDIVERSE® / MEDIO®", to: "/platforms" },
     ],
   },
-
   {
-    title: "Investors",
+    title: "Corporate",
     links: [
-      { label: "Investor Room", to: "/investors" },
-      { label: "Strategic Roadmap", to: "/investors" },
+      { label: "Company", to: "/company" },
+      { label: "Impact", to: "/impact" },
+      { label: "Investors", to: "/investors" },
       { label: "Newsroom", to: "/newsroom" },
       { label: "Contact", to: "/contact" },
     ],
   },
+  {
+    title: "Explore",
+    links: [
+      { label: "Explore RÉNAI.CORE →", href: "https://renai-core.lovable.app" },
+      { label: "Explore UMRAIO →", href: "https://www.umraio.com" },
+    ],
+  },
 ] as const;
+
 
 export function SiteFooter() {
   return (

@@ -16,6 +16,7 @@ import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as InvestorsRouteImport } from './routes/investors'
 import { Route as NewsroomRouteImport } from './routes/newsroom'
 import { Route as PlatformsRouteImport } from './routes/platforms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TechnologyRouteImport } from './routes/technology'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +54,11 @@ const PlatformsRoute = PlatformsRouteImport.update({
   path: '/platforms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TechnologyRoute = TechnologyRouteImport.update({
   id: '/technology',
   path: '/technology',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/investors': typeof InvestorsRoute
   '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/investors': typeof InvestorsRoute
   '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/investors': typeof InvestorsRoute
   '/newsroom': typeof NewsroomRoute
   '/platforms': typeof PlatformsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/investors'
     | '/newsroom'
     | '/platforms'
+    | '/sitemap.xml'
     | '/technology'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/investors'
     | '/newsroom'
     | '/platforms'
+    | '/sitemap.xml'
     | '/technology'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/investors'
     | '/newsroom'
     | '/platforms'
+    | '/sitemap.xml'
     | '/technology'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   InvestorsRoute: typeof InvestorsRoute
   NewsroomRoute: typeof NewsroomRoute
   PlatformsRoute: typeof PlatformsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TechnologyRoute: typeof TechnologyRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlatformsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/technology': {
       id: '/technology'
       path: '/technology'
@@ -203,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   InvestorsRoute: InvestorsRoute,
   NewsroomRoute: NewsroomRoute,
   PlatformsRoute: PlatformsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport

@@ -150,6 +150,28 @@ function Platforms() {
           Development status is stated explicitly. Capabilities described for platforms in strategic
           development represent design intent, not released features.
         </p>
+
+        <div className="mt-16 md:mt-[72px]">
+          <Reveal>
+            <p className="eyebrow">Our AI Platforms</p>
+            <h2 className="mt-4 text-2xl font-semibold sm:text-3xl md:text-4xl">
+              Autonomous AI Business Executives
+            </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <figure
+              className="panel mt-6 overflow-hidden p-4 sm:p-6 md:p-8"
+              style={{ boxShadow: "0 40px 120px -60px color-mix(in oklab, var(--primary) 45%, transparent)" }}
+            >
+              <img
+                src={aiExecutives.url}
+                alt="Digital Renaissance Metaverse autonomous AI business executives — RAIO for UMRAIO, ORIO for WORIO, and EDIO for MEDIO."
+                className="h-auto w-full rounded-sm object-contain"
+                loading="lazy"
+              />
+            </figure>
+          </Reveal>
+        </div>
       </Section>
     </>
   );

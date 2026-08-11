@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CompanyRouteImport } from './routes/company'
+import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as PlatformsRouteImport } from './routes/platforms'
+import { Route as TechnologyRouteImport } from './routes/technology'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactRoute = ImpactRouteImport.update({
+  id: '/impact',
+  path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlatformsRoute = PlatformsRouteImport.update({
+  id: '/platforms',
+  path: '/platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TechnologyRoute = TechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/impact': typeof ImpactRoute
+  '/platforms': typeof PlatformsRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/impact': typeof ImpactRoute
+  '/platforms': typeof PlatformsRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/company': typeof CompanyRoute
+  '/impact': typeof ImpactRoute
+  '/platforms': typeof PlatformsRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/company' | '/impact' | '/platforms' | '/technology'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/company' | '/impact' | '/platforms' | '/technology'
+  id: '__root__' | '/' | '/company' | '/impact' | '/platforms' | '/technology'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CompanyRoute: typeof CompanyRoute
+  ImpactRoute: typeof ImpactRoute
+  PlatformsRoute: typeof PlatformsRoute
+  TechnologyRoute: typeof TechnologyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact': {
+      id: '/impact'
+      path: '/impact'
+      fullPath: '/impact'
+      preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/platforms': {
+      id: '/platforms'
+      path: '/platforms'
+      fullPath: '/platforms'
+      preLoaderRoute: typeof PlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/technology': {
+      id: '/technology'
+      path: '/technology'
+      fullPath: '/technology'
+      preLoaderRoute: typeof TechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CompanyRoute: CompanyRoute,
+  ImpactRoute: ImpactRoute,
+  PlatformsRoute: PlatformsRoute,
+  TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

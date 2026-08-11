@@ -39,7 +39,7 @@ function Platforms() {
           <img
             src={aiExecutives.url}
             alt="Autonomous AI business executives across the Digital Renaissance ecosystems"
-            className="mt-14 w-full rounded-sm"
+            className="mt-14 w-full rounded-sm mix-blend-screen"
             loading="lazy"
           />
         </Reveal>
@@ -48,7 +48,7 @@ function Platforms() {
       <Section className="border-border border-y">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-md" loading="lazy" />
+            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-md mix-blend-screen" loading="lazy" />
             <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
               Autonomous AI Business Executive
             </p>
@@ -59,7 +59,7 @@ function Platforms() {
             <img
               src={umraverse.url}
               alt="UMRAVERSE ecosystem brand mark"
-              className="mt-4 w-full max-w-[190px] opacity-70"
+              className="mt-4 w-full max-w-[190px] opacity-70 mix-blend-screen"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">

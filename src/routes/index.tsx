@@ -185,7 +185,7 @@ function Home() {
             <img
               src={drmLogo.url}
               alt="Digital Renaissance Metaverse corporate logo"
-              className="h-32 w-auto sm:h-40 lg:h-44"
+              className="h-32 w-auto mix-blend-screen sm:h-40 lg:h-44"
               fetchPriority="high"
             />
             <p className="eyebrow mt-8">Digital Renaissance Metaverse™</p>
@@ -378,7 +378,7 @@ function Home() {
             <img
               src={renaiCore.url}
               alt="RÉNAI.CORE — The Autonomous Intelligence Core"
-              className="w-full rounded-sm"
+              className="w-full rounded-sm mix-blend-screen"
               loading="lazy"
             />
           </Reveal>
@@ -498,7 +498,7 @@ function Home() {
                   <img
                     src={p.image}
                     alt={`${p.name} brand mark`}
-                    className="mt-auto w-full max-w-[200px] pt-8 opacity-75"
+                    className="mt-auto w-full max-w-[200px] pt-8 opacity-75 mix-blend-screen"
                     loading="lazy"
                   />
                 ) : null}
@@ -510,7 +510,7 @@ function Home() {
           <img
             src={aiExecutives.url}
             alt="RAIO, ORIO and EDIO — autonomous AI business executives across the Digital Renaissance ecosystems"
-            className="mt-10 w-full rounded-sm"
+            className="mt-10 w-full rounded-sm mix-blend-screen"
             loading="lazy"
           />
         </Reveal>
@@ -529,7 +529,7 @@ function Home() {
             <img
               src={umraio.url}
               alt="UMRAIO brand mark"
-              className="w-full max-w-md"
+              className="w-full max-w-md mix-blend-screen"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
@@ -542,7 +542,7 @@ function Home() {
             <img
               src={umraverse.url}
               alt="UMRAVERSE ecosystem brand mark"
-              className="mt-4 w-full max-w-[190px] opacity-70"
+              className="mt-4 w-full max-w-[190px] opacity-70 mix-blend-screen"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">

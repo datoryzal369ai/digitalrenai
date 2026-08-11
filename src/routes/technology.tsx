@@ -95,7 +95,7 @@ function Technology() {
           <img
             src={renaiCore.url}
             alt="RÉNAI.CORE — The Autonomous Intelligence Core"
-            className="mt-14 w-full rounded-sm"
+            className="mt-14 w-full rounded-sm mix-blend-screen"
             loading="lazy"
           />
         </Reveal>

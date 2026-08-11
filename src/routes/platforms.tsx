@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, StatusTag } from "@/components/site/primitives";
 import umraverse from "@/assets/umraverse-mark.png.asset.json";
-import umraio from "@/assets/umraio.png.asset.json";
+import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
 import aiExecutives from "@/assets/ai-executives.png.asset.json";
 
 const title = "Platforms — UMRAVERSE®, WORVERSE® and MEDIVERSE® Ecosystems";
@@ -48,7 +48,7 @@ function Platforms() {
       <Section className="border-border border-y">
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-[330px]" loading="lazy" />
+            <img src={umraioWordmark.url} alt="UMRAIO® brand mark" className="w-full max-w-[330px]" loading="lazy" />
             <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
               Autonomous AI Business Executive
             </p>
@@ -95,12 +95,31 @@ function Platforms() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/contact"
-              className="border-primary/50 text-primary hover:bg-primary/10 mt-9 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
-            >
-              Request a Platform Briefing
-            </Link>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a
+                href="https://www.umraio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-primary/50 text-primary hover:bg-primary/10 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Explore UMRAIO® →
+              </a>
+              <a
+                href="https://www.umraio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-border text-muted-foreground hover:text-foreground inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                View Product
+              </a>
+              <Link
+                to="/contact"
+                className="text-muted-foreground hover:text-foreground inline-flex px-2 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+              >
+                Request a Platform Briefing
+              </Link>
+            </div>
+
           </Reveal>
         </div>
       </Section>

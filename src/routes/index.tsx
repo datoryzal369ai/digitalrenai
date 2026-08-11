@@ -121,16 +121,30 @@ const stackLayers = [
   ["08", "Governance & Observability", "Security, audit trails, human oversight and telemetry."],
 ];
 
-const platforms = [
+const umraioCapabilities = [
   {
-    name: "UMRAVERSE®",
-    domain: "Islamic Travel & Umrah Digital Ecosystem",
-    exec: "UMRAIO®",
-    execDesc: "Autonomous AI Business Executive for Modern Umrah Agencies",
-    status: "Flagship / Active Development",
-    tone: "cyan" as const,
-    image: umraverse.url,
+    icon: TrendingUp,
+    title: "AI Sales",
+    desc: "Lead intelligence, response and follow-up.",
   },
+  {
+    icon: MessagesSquare,
+    title: "AI Customer Experience",
+    desc: "Context-aware customer conversations and support.",
+  },
+  {
+    icon: Workflow,
+    title: "AI Operations",
+    desc: "Workflow automation and business execution.",
+  },
+  {
+    icon: BarChart3,
+    title: "AI Business Intelligence",
+    desc: "Analytics, recommendations and decision support.",
+  },
+];
+
+const futureVerticals = [
   {
     name: "WORVERSE®",
     domain: "Workforce & Employment Digital Ecosystem",
@@ -138,7 +152,6 @@ const platforms = [
     execDesc: "Autonomous AI Business Executive for Workforce Agencies",
     status: "Strategic Development",
     tone: "violet" as const,
-    image: null,
   },
   {
     name: "MEDIVERSE®",
@@ -147,9 +160,9 @@ const platforms = [
     execDesc: "Autonomous AI Business Executive for Medical Tourism",
     status: "Strategic Development",
     tone: "amber" as const,
-    image: null,
   },
 ];
+
 
 const problems = [
   "Slow response to inbound enquiries",

@@ -11,6 +11,8 @@ import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
 import dashboard from "@/assets/renai-dashboard.png.asset.json";
 
 const UMRAIO_URL = "https://www.umraio.com";
+const RENAI_CORE_URL = "https://renai-core.lovable.app";
+
 
 const umraioProductCapabilities = [
   ["AI Conversation", "Understand and respond to customer enquiries."],

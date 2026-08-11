@@ -543,11 +543,12 @@ function Home() {
                     className="border-primary/10 pointer-events-none absolute top-1/2 left-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border"
                   />
                   <img
-                    src={umraio.url}
+                    src={umraioWordmark.url}
                     alt="UMRAIO® brand mark"
-                    className="relative mx-auto w-full max-w-[380px]"
+                    className="relative mx-auto w-full max-w-[420px]"
                     loading="lazy"
                   />
+
                 </div>
 
                 <div className="mt-8 flex items-center gap-5">

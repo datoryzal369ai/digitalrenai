@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, StatusTag } from "@/components/site/primitives";
-import umraverse from "@/assets/umraverse.png.asset.json";
+import umraverse from "@/assets/umraverse-mark.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
 import aiExecutives from "@/assets/ai-executives.png.asset.json";
 
@@ -46,25 +46,38 @@ function Platforms() {
       </Section>
 
       <Section className="border-border border-y">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
-            <img src={umraverse.url} alt="UMRAVERSE brand mark" className="w-full max-w-sm" loading="lazy" />
+            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-[330px]" loading="lazy" />
+            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
+              Autonomous AI Business Executive
+            </p>
+            <div className="hairline mt-8" />
+            <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.24em] uppercase">
+              Operating within
+            </p>
             <img
-              src={umraio.url}
-              alt="UMRAIO brand mark"
-              className="mt-8 w-full max-w-xs"
+              src={umraverse.url}
+              alt="UMRAVERSE ecosystem brand mark"
+              className="mt-4 w-full max-w-[190px] opacity-70"
               loading="lazy"
             />
+            <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">
+              Islamic Travel &amp; Umrah Digital Ecosystem
+            </p>
           </Reveal>
           <Reveal delay={120}>
             <StatusTag tone="cyan">Flagship · Active Development</StatusTag>
             <h2 className="mt-6 text-3xl font-semibold sm:text-4xl">
-              UMRAVERSE® — Islamic Travel &amp; Umrah Digital Ecosystem
+              UMRAIO® — Autonomous AI Business Executive
             </h2>
+            <p className="text-muted-foreground mt-3 text-[11px] tracking-[0.2em] uppercase">
+              Built for modern Umrah agencies · UMRAVERSE® Ecosystem
+            </p>
             <p className="text-muted-foreground mt-5 leading-relaxed">
-              UMRAIO® is the Autonomous AI Business Executive for modern Umrah agencies: capturing and
-              qualifying leads, understanding customer intent, automating WhatsApp conversations,
-              generating quotations, following up and analysing business performance.
+              UMRAIO® captures and qualifies leads, understands customer intent, automates WhatsApp
+              conversations, generates quotations, follows up and analyses business performance —
+              operating within UMRAVERSE®, the Islamic Travel &amp; Umrah digital ecosystem.
             </p>
             <ul className="text-muted-foreground mt-7 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
               {[

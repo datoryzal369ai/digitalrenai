@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
-import renaiCore from "@/assets/renai-core.png.asset.json";
+import renaiCore from "@/assets/renai-core-mark.png.asset.json";
 
 const title = "Technology — RÉNAI.CORE™ Autonomous Intelligence Architecture";
 const description =

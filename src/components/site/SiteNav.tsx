@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/drm-logo.png.asset.json";
+import logo from "@/assets/drm-mark.png.asset.json";
 
 const nav = [
   { label: "Home", to: "/" },
@@ -30,15 +30,13 @@ export function SiteNav() {
         solid ? "bg-background/85 border-border border-b backdrop-blur-xl" : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="Digital Renaissance Metaverse logo" className="h-9 w-auto" />
-          <span className="hidden text-[11px] leading-tight tracking-[0.22em] uppercase sm:block">
-            Digital Renaissance
-            <span className="text-muted-foreground block text-[9px] tracking-[0.3em]">
-              Metaverse™
-            </span>
-          </span>
+      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
+        <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)} aria-label="Digital Renaissance Metaverse — Home">
+          <img
+            src={logo.url}
+            alt="Digital Renaissance Metaverse logo"
+            className="h-12 w-auto shrink-0 sm:h-14"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
-import renaiCore from "@/assets/renai-core.png.asset.json";
-import umraverse from "@/assets/umraverse.png.asset.json";
+import drmLogo from "@/assets/drm-mark.png.asset.json";
+import renaiCore from "@/assets/renai-core-mark.png.asset.json";
+import umraverse from "@/assets/umraverse-mark.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
 import aiExecutives from "@/assets/ai-executives.png.asset.json";
 import dashboard from "@/assets/renai-dashboard.png.asset.json";
@@ -181,8 +182,14 @@ function Home() {
         <div className="from-background absolute inset-0 bg-gradient-to-b via-transparent to-[var(--background)]" />
         <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="animate-rise">
-            <p className="eyebrow">Digital Renaissance Metaverse™</p>
-            <h1 className="mt-6 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
+            <img
+              src={drmLogo.url}
+              alt="Digital Renaissance Metaverse corporate logo"
+              className="h-32 w-auto sm:h-40 lg:h-44"
+              fetchPriority="high"
+            />
+            <p className="eyebrow mt-8">Autonomous Intelligence Company</p>
+            <h1 className="mt-5 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
               Building the autonomous intelligence economy.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-xl text-base leading-relaxed sm:text-lg">
@@ -491,7 +498,7 @@ function Home() {
                   <img
                     src={p.image}
                     alt={`${p.name} brand mark`}
-                    className="mt-auto pt-7"
+                    className="mt-auto w-full max-w-[200px] pt-8 opacity-75"
                     loading="lazy"
                   />
                 ) : null}
@@ -519,8 +526,30 @@ function Home() {
         </Reveal>
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-sm" loading="lazy" />
+            <img
+              src={umraio.url}
+              alt="UMRAIO brand mark"
+              className="w-full max-w-[330px]"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
+              Autonomous AI Business Executive
+            </p>
+            <div className="hairline mt-8" />
+            <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.24em] uppercase">
+              Operating within
+            </p>
+            <img
+              src={umraverse.url}
+              alt="UMRAVERSE ecosystem brand mark"
+              className="mt-4 w-full max-w-[190px] opacity-70"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">
+              Islamic Travel &amp; Umrah Digital Ecosystem
+            </p>
           </Reveal>
+
           <Reveal delay={120}>
             <div className="flex flex-wrap gap-2">
               {["Not a chatbot", "Not just a CRM", "Not just automation"].map((t) => (

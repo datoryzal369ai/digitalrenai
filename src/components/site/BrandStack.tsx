@@ -51,17 +51,21 @@ function Tier({
   );
 }
 
-export function BrandStack() {
+export function BrandStack({ includeProduct = true }: { includeProduct?: boolean }) {
   return (
     <div className="mx-auto max-w-4xl">
-      <Tier
-        label=""
-        src={umraio.url}
-        alt="UMRAIO® — Autonomous AI Business Executive"
-        caption="Autonomous AI Business Executive"
-        widthClass="max-w-[19rem] sm:max-w-[26rem] lg:max-w-[32rem]"
-      />
-      <Connector />
+      {includeProduct ? (
+        <>
+          <Tier
+            label=""
+            src={umraio.url}
+            alt="UMRAIO® — Autonomous AI Business Executive"
+            caption="Autonomous AI Business Executive"
+            widthClass="max-w-[19rem] sm:max-w-[26rem] lg:max-w-[32rem]"
+          />
+          <Connector />
+        </>
+      ) : null}
       <Tier
         label="Powered by"
         src={renaiCore.url}

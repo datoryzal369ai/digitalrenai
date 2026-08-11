@@ -498,7 +498,7 @@ function Home() {
                   <img
                     src={p.image}
                     alt={`${p.name} brand mark`}
-                    className="mt-auto pt-7"
+                    className="mt-auto w-full max-w-[200px] pt-8 opacity-75"
                     loading="lazy"
                   />
                 ) : null}

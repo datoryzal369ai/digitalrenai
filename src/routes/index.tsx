@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
+import drmLogo from "@/assets/drm-logo.png.asset.json";
 import renaiCore from "@/assets/renai-core.png.asset.json";
 import umraverse from "@/assets/umraverse.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";

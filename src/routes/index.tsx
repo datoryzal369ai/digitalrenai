@@ -181,8 +181,14 @@ function Home() {
         <div className="from-background absolute inset-0 bg-gradient-to-b via-transparent to-[var(--background)]" />
         <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="animate-rise">
-            <p className="eyebrow">Digital Renaissance Metaverse™</p>
-            <h1 className="mt-6 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
+            <img
+              src={drmLogo.url}
+              alt="Digital Renaissance Metaverse corporate logo"
+              className="h-32 w-auto sm:h-40 lg:h-44"
+              fetchPriority="high"
+            />
+            <p className="eyebrow mt-8">Digital Renaissance Metaverse™</p>
+            <h1 className="mt-5 text-[2.15rem] leading-[1.03] font-semibold text-balance sm:text-5xl lg:text-6xl">
               Building the autonomous intelligence economy.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-xl text-base leading-relaxed sm:text-lg">

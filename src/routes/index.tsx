@@ -64,10 +64,13 @@ export const Route = createFileRoute("/")({
             {
               "@type": "Product",
               name: "UMRAIO®",
+              url: "https://www.umraio.com",
               description:
-                "Autonomous AI Business Executive for modern Umrah agencies, operating within the UMRAVERSE® ecosystem. Flagship product in active development.",
+                "Autonomous AI Business Executive for modern Umrah agencies, operating within the UMRAVERSE® ecosystem and powered by RÉNAI.CORE™. Flagship product in active development.",
               brand: { "@id": "/#organization" },
+              sameAs: ["https://www.umraio.com"],
             },
+
             {
               "@type": "FAQPage",
               mainEntity: [
@@ -92,7 +95,7 @@ export const Route = createFileRoute("/")({
                   name: "What is UMRAIO®?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "UMRAIO® is the company's first vertical Autonomous AI Business Executive, designed for modern Umrah agencies within the UMRAVERSE® ecosystem.",
+                    text: "UMRAIO® is Digital Renaissance Metaverse's flagship vertical autonomous AI business executive, built for modern Umrah agencies within the UMRAVERSE® ecosystem and powered by the RÉNAI.CORE™ intelligence architecture. The dedicated product experience is at https://www.umraio.com.",
                   },
                 },
               ],
@@ -507,22 +510,38 @@ function Home() {
             <div className="grid gap-12 p-7 sm:p-10 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16 lg:p-14">
               <div className="min-w-0">
                 <StatusTag tone="cyan">Flagship / Active Development</StatusTag>
-                <h3 className="font-display mt-7 text-4xl tracking-[0.02em] sm:text-5xl">UMRAIO®</h3>
+                <p className="text-muted-foreground mt-6 text-[10px] tracking-[0.28em] uppercase">
+                  Our flagship AI executive
+                </p>
+                <h3 className="font-display mt-3 text-4xl tracking-[0.02em] sm:text-5xl">UMRAIO®</h3>
                 <p className="text-muted-foreground mt-3 text-[11px] tracking-[0.22em] uppercase">
                   Autonomous AI Business Executive for Modern Umrah Agencies
                 </p>
                 <p className="text-muted-foreground mt-6 leading-relaxed">
-                  An autonomous AI business layer designed to help modern Umrah agencies capture
-                  leads, respond faster, follow up prospects, support sales and marketing, automate
-                  repetitive workflows and improve business intelligence.
+                  UMRAIO brings autonomous intelligence into the daily operations of modern Umrah
+                  agencies — helping teams respond, reason, follow up, execute and make better
+                  business decisions.
                 </p>
-                <Link
-                  to="/platforms"
-                  className="border-primary/50 text-primary hover:bg-primary/10 mt-9 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
-                >
-                  Explore UMRAIO →
-                </Link>
+                <div className="mt-9 flex flex-wrap items-center gap-3">
+                  <a
+                    href={UMRAIO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-primary/50 text-primary hover:bg-primary/10 inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+                  >
+                    Explore UMRAIO® →
+                  </a>
+                  <a
+                    href={UMRAIO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-border text-muted-foreground hover:text-foreground inline-flex rounded-sm border px-6 py-3.5 text-[11px] tracking-[0.18em] uppercase transition-colors"
+                  >
+                    View Product
+                  </a>
+                </div>
               </div>
+
 
               {/* UMRAIO product identity visual */}
               <div className="relative">
@@ -553,6 +572,16 @@ function Home() {
 
                 <div className="mt-8 flex items-center gap-5">
                   <span className="text-muted-foreground shrink-0 text-[10px] tracking-[0.28em] uppercase">
+                    Powered by
+                  </span>
+                  <span className="hairline" />
+                </div>
+                <p className="text-gold font-display mt-3 text-sm tracking-[0.2em] uppercase">
+                  RÉNAI.CORE™
+                </p>
+
+                <div className="mt-7 flex items-center gap-5">
+                  <span className="text-muted-foreground shrink-0 text-[10px] tracking-[0.28em] uppercase">
                     Part of
                   </span>
                   <span className="hairline" />
@@ -568,6 +597,7 @@ function Home() {
                     Islamic Travel &amp; Umrah Digital Ecosystem
                   </p>
                 </div>
+
               </div>
             </div>
 

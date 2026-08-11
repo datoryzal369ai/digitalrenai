@@ -145,6 +145,17 @@ function Technology() {
           Formal certifications and compliance attestations will be published only once obtained and
           verifiable.
         </p>
+        <div className="mt-10">
+          <a
+            href="https://renai-core.lovable.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
+          >
+            Discover RÉNAI.CORE™ →
+          </a>
+        </div>
+
       </Section>
     </>
   );

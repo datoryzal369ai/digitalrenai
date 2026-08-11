@@ -30,7 +30,7 @@ export function SiteNav() {
         solid ? "bg-background/85 border-border border-b backdrop-blur-xl" : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)} aria-label="Digital Renaissance Metaverse — Home">
           <img
             src={logo.url}

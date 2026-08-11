@@ -47,7 +47,7 @@ export function SiteFooter() {
             <img
               src={logo.url}
               alt="Digital Renaissance Metaverse logo"
-              className="h-14 w-auto"
+              className="h-24 w-auto sm:h-28"
               loading="lazy"
             />
             <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">

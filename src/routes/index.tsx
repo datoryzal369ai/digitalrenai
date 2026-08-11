@@ -526,8 +526,30 @@ function Home() {
         </Reveal>
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
-            <img src={umraio.url} alt="UMRAIO brand mark" className="w-full max-w-sm" loading="lazy" />
+            <img
+              src={umraio.url}
+              alt="UMRAIO brand mark"
+              className="w-full max-w-md"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground mt-6 text-[11px] tracking-[0.22em] uppercase">
+              Autonomous AI Business Executive
+            </p>
+            <div className="hairline mt-8" />
+            <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.24em] uppercase">
+              Operating within
+            </p>
+            <img
+              src={umraverse.url}
+              alt="UMRAVERSE ecosystem brand mark"
+              className="mt-4 w-full max-w-[190px] opacity-70"
+              loading="lazy"
+            />
+            <p className="text-muted-foreground mt-3 text-[10px] tracking-[0.2em] uppercase">
+              Islamic Travel &amp; Umrah Digital Ecosystem
+            </p>
           </Reveal>
+
           <Reveal delay={120}>
             <div className="flex flex-wrap gap-2">
               {["Not a chatbot", "Not just a CRM", "Not just automation"].map((t) => (

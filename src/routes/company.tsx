@@ -34,6 +34,11 @@ function Company() {
             intro="Digital Renaissance Metaverse builds autonomous intelligence systems, vertical AI platforms and digital ecosystems designed to transform how businesses operate and how people are served."
             as="h1"
           />
+          <p className="text-muted-foreground mt-6 max-w-3xl text-sm leading-relaxed">
+            Digital Renaissance Metaverse™ is building a new category of Shariah-first digital
+            ecosystems — connecting autonomous intelligence, commerce, community, services and
+            responsible Islamic implementation within a governed architecture.
+          </p>
         </Reveal>
       </Section>
 

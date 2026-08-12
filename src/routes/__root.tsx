@@ -13,6 +13,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import socialPreview from "@/assets/drm-social-preview.jpg.asset.json";
+
+const SITE_URL = "https://digital-renaissance-metaverse.lovable.app";
 
 
 function NotFoundComponent() {
@@ -80,15 +83,46 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Digital Renaissance Metaverse™" },
+      {
+        title:
+          "Digital Renaissance Metaverse™ | Autonomous Intelligence & Shariah-First Digital Ecosystems",
+      },
       {
         name: "description",
         content:
-          "A Malaysian AI technology company building autonomous intelligence systems, vertical AI platforms and digital ecosystems.",
+          "Digital Renaissance Metaverse™ builds autonomous intelligence systems and governed digital ecosystems across AI, commerce, community and services — with an Islamic Implementation Layer™ for relevant halal and Shariah-aware ecosystems.",
+      },
+      {
+        property: "og:title",
+        content:
+          "Digital Renaissance Metaverse™ | Autonomous Intelligence & Shariah-First Digital Ecosystems",
+      },
+      {
+        property: "og:description",
+        content:
+          "Autonomous intelligence systems and governed digital ecosystems across AI, commerce, community and services — with an Islamic Implementation Layer™ for relevant halal and Shariah-aware ecosystems.",
       },
       { property: "og:site_name", content: "Digital Renaissance Metaverse" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: `${SITE_URL}${socialPreview.url}` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "640" },
+      {
+        property: "og:image:alt",
+        content: "Digital Renaissance Metaverse — Autonomous Intelligence × Shariah-First Digital Ecosystems",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content:
+          "Digital Renaissance Metaverse™ | Autonomous Intelligence & Shariah-First Digital Ecosystems",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Autonomous intelligence systems and governed digital ecosystems across AI, commerce, community and services — with an Islamic Implementation Layer™ for relevant halal and Shariah-aware ecosystems.",
+      },
+      { name: "twitter:image", content: `${SITE_URL}${socialPreview.url}` },
       { name: "theme-color", content: "#0b0f16" },
     ],
     links: [

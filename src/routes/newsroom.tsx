@@ -30,6 +30,7 @@ function Newsroom() {
             eyebrow="Newsroom"
             title="Announcements published only when confirmed."
             intro="This newsroom is live and ready. We do not publish placeholder press releases, unconfirmed milestones or unverified media coverage."
+            as="h1"
           />
         </Reveal>
       </Section>

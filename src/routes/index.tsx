@@ -1251,14 +1251,16 @@ function Home() {
             <SectionHead eyebrow="Business Model" title="A layered revenue architecture." />
             <ul className="mt-8 space-y-px">
               {[
-                "SaaS subscriptions",
+                "AI SaaS subscriptions",
                 "AI executive subscriptions",
-                "Enterprise licensing",
-                "Transaction / marketplace revenue",
+                "Platform subscriptions",
+                "Enterprise licensing & solutions",
+                "Marketplace commissions",
+                "Transaction infrastructure",
                 "API / platform usage",
-                "Vertical ecosystem commissions",
+                "Vertical ecosystem services",
                 "Strategic partnerships",
-                "Enterprise implementation",
+                "Digital services & implementation",
               ].map((r, i) => (
                 <li key={r} className="panel flex items-center gap-5 px-5 py-3.5 text-sm">
                   <span className="text-gold/70 text-xs">{String(i + 1).padStart(2, "0")}</span>

@@ -532,7 +532,10 @@ function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 grid gap-2 sm:grid-cols-4">
+            <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.28em] uppercase">
+              Principles &amp; Governance
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-4">
               {["Security", "Governance", "Human Oversight", "Auditability"].map((c) => (
                 <div
                   key={c}
@@ -542,8 +545,11 @@ function Home() {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground mt-6 text-xs">
-              Horizontal control layers apply across every stage of the loop.
+            <p className="text-muted-foreground mt-6 max-w-3xl text-xs leading-relaxed">
+              Horizontal control layers apply across every stage of the loop. Intelligence determines
+              what can be done. Governance determines how it should be done, within defined
+              principles, policies and oversight. Where relevant, the Islamic Implementation Layer™
+              provides additional principles and governance context.
             </p>
           </div>
         </Reveal>

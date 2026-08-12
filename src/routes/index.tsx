@@ -23,9 +23,10 @@ const umraioProductCapabilities = [
   ["Customer Experience", "Support faster and more consistent customer engagement."],
 ];
 
-const title = "Digital Renaissance Metaverse™ — Autonomous Intelligence for the Real Economy";
+const title =
+  "Digital Renaissance Metaverse™ | Autonomous Intelligence & Shariah-First Digital Ecosystems";
 const description =
-  "A Malaysian AI technology company building RÉNAI.CORE™, vertical AI platforms and autonomous AI business executives for Islamic travel, workforce and medical tourism ecosystems.";
+  "Digital Renaissance Metaverse™ builds autonomous intelligence systems and governed digital ecosystems across AI, commerce, community and services — with an Islamic Implementation Layer™ for relevant halal and Shariah-aware ecosystems.";
 
 export const Route = createFileRoute("/")({
   component: Home,

@@ -575,6 +575,145 @@ function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="text-muted-foreground mt-6 text-xs">
+          Domain governance can be extended for specific ecosystems, including Shariah-aware and
+          halal operating requirements.
+        </p>
+      </Section>
+
+      {/* ISLAMIC IMPLEMENTATION LAYER */}
+      <Section id="islamic-implementation-layer" className="border-border border-y">
+        <Reveal>
+          <SectionHead
+            eyebrow="Islamic Implementation Layer™"
+            title="From principles to implementation."
+            intro="An architectural layer designed to translate relevant Islamic principles, Shariah considerations, halal baselines and Islamic business ethics into governance rules, decision support, product and service policies, AI behaviour and operational workflows."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["01", "Shariah Principles", "Relevant Islamic principles and governance considerations informing applicable decisions."],
+            ["02", "Halal Baseline", "A structured baseline for evaluating relevant products, services, transactions and business activities."],
+            ["03", "Islamic Implementation", "Translating principles and ethical requirements into practical technology, commerce, community and operational workflows."],
+            ["04", "Responsible AI Governance", "Human oversight, explainability, traceability, auditability, policy controls and responsible execution."],
+          ].map(([n, h, p], i) => (
+            <Reveal key={h} delay={i * 70}>
+              <div className="panel border-gold/25 h-full p-7">
+                <span className="text-gold/70 font-display text-xs">{n}</span>
+                <h3 className="text-gold font-display mt-4 text-sm tracking-[0.14em] uppercase">
+                  {h}
+                </h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={140}>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            <div className="panel px-6 py-5">
+              <p className="text-muted-foreground text-[10px] tracking-[0.2em] uppercase">
+                RÉNAI.CORE™
+              </p>
+              <p className="mt-2 text-sm">Autonomous intelligence — context, reasoning, execution.</p>
+            </div>
+            <div className="panel border-gold/25 px-6 py-5">
+              <p className="text-muted-foreground text-[10px] tracking-[0.2em] uppercase">
+                Islamic Implementation Layer™
+              </p>
+              <p className="mt-2 text-sm">
+                Principles, halal baseline, ethics, governance and implementation.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+        <p className="text-muted-foreground mt-8 max-w-3xl text-xs leading-relaxed">
+          This layer is designed to support Shariah-aware implementation and remains subject to
+          appropriate Shariah governance and expert oversight. AI systems are not a religious
+          authority, do not issue religious rulings and do not replace qualified scholars. No formal
+          Shariah certification is claimed.
+        </p>
+      </Section>
+
+      {/* DIGITAL ECOSYSTEM LAYERS */}
+      <Section id="ecosystems">
+        <Reveal>
+          <SectionHead
+            eyebrow="Digital Ecosystem Layers"
+            title="One intelligence architecture. Multiple real-world ecosystems."
+            intro="Above the intelligence core and governance layers, Digital Renaissance ecosystems can extend into community, commerce and services — each governed by domain-specific principles and policies."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <Reveal>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Social, built around trust.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Future Digital Renaissance ecosystems can incorporate community and social
+                experiences governed by responsible content policies, ethical interaction, privacy,
+                trust and domain-specific principles.
+              </p>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Where relevant, Islamic content governance can incorporate principles such as
+                honesty, dignity, responsible communication, avoidance of deception and appropriate
+                community standards.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={110}>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Commerce, with a governed foundation.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Digital Renaissance ecosystems can incorporate marketplace infrastructure designed
+                around transparent commerce, responsible seller participation, product and service
+                governance, appropriate halal baselines and auditable operational policies.
+              </p>
+              <div className="mt-6">
+                <FlowChain
+                  dense
+                  steps={[
+                    "Seller",
+                    "Product / Service",
+                    "Halal Baseline",
+                    "Governance",
+                    "Transaction",
+                    "Customer",
+                    "Audit / Feedback",
+                  ]}
+                />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={220}>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Services, across real economies.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                The same architecture is configurable by domain across service ecosystems.
+              </p>
+              <ul className="text-muted-foreground mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                {[
+                  "Travel",
+                  "Umrah",
+                  "Workforce",
+                  "Medical Tourism",
+                  "Education",
+                  "Professional Services",
+                  "Community Services",
+                ].map((s) => (
+                  <li key={s} className="border-border/50 border-b py-1.5">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+        <p className="text-muted-foreground mt-8 text-xs">
+          Ecosystem layers describe architectural direction. Products are published only when
+          available.
+        </p>
       </Section>
 
       {/* PORTFOLIO */}

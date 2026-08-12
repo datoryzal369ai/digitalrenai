@@ -137,7 +137,7 @@ const stackLayers = [
   ["05", "Agent & Tool Orchestration", "Task decomposition, routing and tool execution."],
   ["06", "Autonomous Execution", "Bounded execution of workflows with permission controls."],
   ["07", "Evaluation & Learning", "Benchmarking, outcome scoring and controlled improvement."],
-  ["08", "Governance & Observability", "Security, audit trails, human oversight and telemetry."],
+  ["08", "Governance & Observability", "Security, audit trails, human oversight, policy controls, responsible AI and domain-specific governance."],
 ];
 
 const umraioCapabilities = [

@@ -13,6 +13,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import socialPreview from "@/assets/drm-social-preview.jpg.asset.json";
+
+const SITE_URL = "https://digital-renaissance-metaverse.lovable.app";
 
 
 function NotFoundComponent() {

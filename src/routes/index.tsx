@@ -1436,11 +1436,12 @@ function Home() {
         <div className="relative mx-auto max-w-4xl text-center">
           <Reveal>
             <h2 className="text-3xl leading-[1.06] font-semibold text-balance sm:text-5xl">
-              The next era of digital intelligence is being built now.
+              Building the next generation of Shariah-first digital ecosystems.
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl leading-relaxed">
-              Digital Renaissance Metaverse is building intelligent systems for a world where
-              technology does more than assist — it understands, adapts and executes.
+              Autonomous intelligence, governed by principles — Digital Renaissance Metaverse™ builds
+              intelligent systems for a world where technology does more than assist: it understands,
+              adapts and executes, responsibly.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link

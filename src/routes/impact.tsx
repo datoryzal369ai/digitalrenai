@@ -30,6 +30,7 @@ function Impact() {
             eyebrow="National & Social Impact"
             title="Technology built for the real economy."
             intro="Our intent is that vertical intelligence strengthens the businesses and communities it serves. The commitments below describe direction and intent, not completed outcomes."
+            as="h1"
           />
         </Reveal>
       </Section>

@@ -39,6 +39,7 @@ function Investors() {
             eyebrow="Investors & Strategic Partners"
             title="An architecture company building category infrastructure."
             intro="We present structure, strategy and status — not projections. Financial figures, traction metrics and partnership names are published only when verified."
+            as="h1"
           />
         </Reveal>
         <Reveal delay={120}>

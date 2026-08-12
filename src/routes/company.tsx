@@ -32,6 +32,7 @@ function Company() {
             eyebrow="Company"
             title="A Malaysian AI technology company with a global ambition."
             intro="Digital Renaissance Metaverse builds autonomous intelligence systems, vertical AI platforms and digital ecosystems designed to transform how businesses operate and how people are served."
+            as="h1"
           />
         </Reveal>
       </Section>

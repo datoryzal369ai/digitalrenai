@@ -44,7 +44,8 @@ function Technology() {
               eyebrow="RÉNAI.CORE™"
               title="The Autonomous Intelligence Core."
               intro="An evolving intelligence layer designed to power vertical autonomous AI systems. RÉNAI.CORE™ is an Autonomous Intelligence Architecture — it is not a claim of artificial general intelligence."
-            />
+              as="h1"
+          />
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
                 href="https://renai-core.lovable.app"

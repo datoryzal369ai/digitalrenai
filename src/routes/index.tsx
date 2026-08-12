@@ -863,6 +863,12 @@ function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="text-muted-foreground mt-6 max-w-3xl text-xs leading-relaxed">
+          Each vertical follows the same pattern: RÉNAI.CORE™ → Islamic Implementation Layer™ where
+          relevant → vertical domain intelligence → autonomous executive → real-world ecosystem. The
+          architecture is configurable by domain; not every future ecosystem is Islamic.
+        </p>
+
 
       </Section>
 

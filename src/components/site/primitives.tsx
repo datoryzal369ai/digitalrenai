@@ -64,18 +64,20 @@ export function SectionHead({
   title,
   intro,
   align = "left",
+  as: Heading = "h2",
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   align?: "left" | "center";
+  as?: "h1" | "h2";
 }) {
   return (
     <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h2 className="mt-4 text-3xl leading-[1.08] font-semibold text-balance sm:text-4xl md:text-5xl">
+      <Heading className="mt-4 text-3xl leading-[1.08] font-semibold text-balance sm:text-4xl md:text-5xl">
         {title}
-      </h2>
+      </Heading>
       {intro ? (
         <p className="text-muted-foreground mt-5 text-base leading-relaxed sm:text-lg">{intro}</p>
       ) : null}

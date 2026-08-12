@@ -1405,11 +1405,29 @@ function Home() {
             </table>
           </div>
         </Reveal>
+        <Reveal delay={120}>
+          <div className="panel border-gold/25 mt-10 p-7 sm:p-9">
+            <p className="eyebrow">Category Ladder</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {[
+                ["Most AI tools", "Assist"],
+                ["Autonomous AI", "Execute"],
+                ["Shariah-First Ecosystem Architecture", "Execute within principles and governance"],
+              ].map(([k, v], i) => (
+                <div key={k} className={`px-5 py-4 ${i === 2 ? "border-gold/30 bg-gold/5 rounded-sm border" : "border-border rounded-sm border"}`}>
+                  <p className="text-muted-foreground text-[10px] tracking-[0.18em] uppercase">{k}</p>
+                  <p className="mt-2 text-sm">{v}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
         <p className="text-muted-foreground mt-6 text-xs">
           Category-level comparison of architectural approaches, not an assessment of any named
           product or company.
         </p>
       </Section>
+
 
       {/* FINAL CTA */}
       <section className="relative flex min-h-[85svh] items-center overflow-hidden px-5 py-24 sm:px-8">

@@ -301,6 +301,34 @@ function Home() {
             ))}
           </div>
         </Reveal>
+        <Reveal delay={160}>
+          <div className="mt-10 grid gap-10 lg:grid-cols-2">
+            <p className="text-muted-foreground leading-relaxed">
+              But intelligence alone is not enough. The next generation of digital ecosystems must
+              also consider principles, ethics, trust, governance and the values of the communities
+              they serve.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              For relevant Islamic and halal ecosystems, Digital Renaissance introduces an{" "}
+              <span className="text-foreground">Islamic Implementation Layer™</span> — designed to
+              translate Islamic principles, halal baselines and ethical requirements into governed
+              technology, commerce, community and operational workflows.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="panel mt-10 p-7 sm:p-9">
+            <p className="eyebrow">A New Category</p>
+            <h3 className="font-display mt-4 text-xl tracking-[0.06em] uppercase sm:text-2xl">
+              Shariah-First Digital Ecosystems™
+            </h3>
+            <p className="text-muted-foreground mt-4 max-w-3xl leading-relaxed">
+              Not simply digital products with Islamic labels — but ecosystems designed to
+              incorporate relevant Islamic principles, halal considerations, ethical governance and
+              responsible implementation at the system level.
+            </p>
+          </div>
+        </Reveal>
         <Reveal delay={200}>
           <div className="mt-10">
             <p className="eyebrow mb-4">The Trajectory</p>

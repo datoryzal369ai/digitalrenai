@@ -46,6 +46,12 @@ function Technology() {
               intro="An evolving intelligence layer designed to power vertical autonomous AI systems. RÉNAI.CORE™ is an Autonomous Intelligence Architecture — it is not a claim of artificial general intelligence."
               as="h1"
           />
+            <p className="text-muted-foreground mt-6 max-w-2xl text-sm leading-relaxed">
+              Digital Renaissance combines autonomous intelligence with governed implementation.
+              Where relevant, the Islamic Implementation Layer™ connects Islamic principles, halal
+              baselines, ethical requirements and responsible governance with technology and
+              operational execution.
+            </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
                 href="https://renai-core.lovable.app"

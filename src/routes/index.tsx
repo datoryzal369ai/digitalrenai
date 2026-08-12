@@ -393,8 +393,18 @@ function Home() {
         <Reveal delay={120}>
           <div className="mt-14 space-y-3 text-center">
             {[
-              { label: "Digital Renaissance Metaverse™", sub: "Parent Technology Company", tone: "gold" },
+              { label: "Digital Renaissance Metaverse™", sub: "The Ecosystem Architect", tone: "gold" },
               { label: "RÉNAI.CORE™", sub: "The Autonomous Intelligence Core", tone: "cyan" },
+              {
+                label: "Islamic Implementation Layer™",
+                sub: "Principles • Halal • Ethics • Governance • Implementation",
+                tone: "gold",
+              },
+              {
+                label: "Digital Ecosystems",
+                sub: "Social • Commerce • Services • Community",
+                tone: "platinum",
+              },
               {
                 label: "UMRAVERSE® · WORVERSE® · MEDIVERSE®",
                 sub: "Vertical Digital Ecosystems",

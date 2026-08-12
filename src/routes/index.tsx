@@ -225,9 +225,10 @@ function Home() {
               Building the autonomous intelligence economy.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-xl text-base leading-relaxed sm:text-lg">
-              Digital Renaissance Metaverse builds AI intelligence systems, vertical AI platforms and
-              autonomous digital executives designed to transform how businesses operate, grow and
-              serve people.
+              Digital Renaissance Metaverse™ builds autonomous intelligence systems and digital
+              ecosystems designed to understand context, reason, execute and evolve — with
+              governance, responsible AI and Islamic implementation at the foundation of relevant
+              ecosystems.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a

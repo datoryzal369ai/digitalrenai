@@ -23,9 +23,10 @@ const umraioProductCapabilities = [
   ["Customer Experience", "Support faster and more consistent customer engagement."],
 ];
 
-const title = "Digital Renaissance Metaverse™ — Autonomous Intelligence for the Real Economy";
+const title =
+  "Digital Renaissance Metaverse™ | Autonomous Intelligence & Shariah-First Digital Ecosystems";
 const description =
-  "A Malaysian AI technology company building RÉNAI.CORE™, vertical AI platforms and autonomous AI business executives for Islamic travel, workforce and medical tourism ecosystems.";
+  "Digital Renaissance Metaverse™ builds autonomous intelligence systems and governed digital ecosystems across AI, commerce, community and services — with an Islamic Implementation Layer™ for relevant halal and Shariah-aware ecosystems.";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -136,7 +137,7 @@ const stackLayers = [
   ["05", "Agent & Tool Orchestration", "Task decomposition, routing and tool execution."],
   ["06", "Autonomous Execution", "Bounded execution of workflows with permission controls."],
   ["07", "Evaluation & Learning", "Benchmarking, outcome scoring and controlled improvement."],
-  ["08", "Governance & Observability", "Security, audit trails, human oversight and telemetry."],
+  ["08", "Governance & Observability", "Security, audit trails, human oversight, policy controls, responsible AI and domain-specific governance."],
 ];
 
 const umraioCapabilities = [
@@ -224,9 +225,10 @@ function Home() {
               Building the autonomous intelligence economy.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-xl text-base leading-relaxed sm:text-lg">
-              Digital Renaissance Metaverse builds AI intelligence systems, vertical AI platforms and
-              autonomous digital executives designed to transform how businesses operate, grow and
-              serve people.
+              Digital Renaissance Metaverse™ builds autonomous intelligence systems and digital
+              ecosystems designed to understand context, reason, execute and evolve — with
+              governance, responsible AI and Islamic implementation at the foundation of relevant
+              ecosystems.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
@@ -299,6 +301,34 @@ function Home() {
             ))}
           </div>
         </Reveal>
+        <Reveal delay={160}>
+          <div className="mt-10 grid gap-10 lg:grid-cols-2">
+            <p className="text-muted-foreground leading-relaxed">
+              But intelligence alone is not enough. The next generation of digital ecosystems must
+              also consider principles, ethics, trust, governance and the values of the communities
+              they serve.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              For relevant Islamic and halal ecosystems, Digital Renaissance introduces an{" "}
+              <span className="text-foreground">Islamic Implementation Layer™</span> — designed to
+              translate Islamic principles, halal baselines and ethical requirements into governed
+              technology, commerce, community and operational workflows.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={200}>
+          <div className="panel mt-10 p-7 sm:p-9">
+            <p className="eyebrow">A New Category</p>
+            <h3 className="font-display mt-4 text-xl tracking-[0.06em] uppercase sm:text-2xl">
+              Shariah-First Digital Ecosystems™
+            </h3>
+            <p className="text-muted-foreground mt-4 max-w-3xl leading-relaxed">
+              Not simply digital products with Islamic labels — but ecosystems designed to
+              incorporate relevant Islamic principles, halal considerations, ethical governance and
+              responsible implementation at the system level.
+            </p>
+          </div>
+        </Reveal>
         <Reveal delay={200}>
           <div className="mt-10">
             <p className="eyebrow mb-4">The Trajectory</p>
@@ -363,8 +393,18 @@ function Home() {
         <Reveal delay={120}>
           <div className="mt-14 space-y-3 text-center">
             {[
-              { label: "Digital Renaissance Metaverse™", sub: "Parent Technology Company", tone: "gold" },
+              { label: "Digital Renaissance Metaverse™", sub: "The Ecosystem Architect", tone: "gold" },
               { label: "RÉNAI.CORE™", sub: "The Autonomous Intelligence Core", tone: "cyan" },
+              {
+                label: "Islamic Implementation Layer™",
+                sub: "Principles • Halal • Ethics • Governance • Implementation",
+                tone: "gold",
+              },
+              {
+                label: "Digital Ecosystems",
+                sub: "Social • Commerce • Services • Community",
+                tone: "platinum",
+              },
               {
                 label: "UMRAVERSE® · WORVERSE® · MEDIVERSE®",
                 sub: "Vertical Digital Ecosystems",
@@ -492,7 +532,10 @@ function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 grid gap-2 sm:grid-cols-4">
+            <p className="text-muted-foreground mt-8 text-[10px] tracking-[0.28em] uppercase">
+              Principles &amp; Governance
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-4">
               {["Security", "Governance", "Human Oversight", "Auditability"].map((c) => (
                 <div
                   key={c}
@@ -502,8 +545,11 @@ function Home() {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground mt-6 text-xs">
-              Horizontal control layers apply across every stage of the loop.
+            <p className="text-muted-foreground mt-6 max-w-3xl text-xs leading-relaxed">
+              Horizontal control layers apply across every stage of the loop. Intelligence determines
+              what can be done. Governance determines how it should be done, within defined
+              principles, policies and oversight. Where relevant, the Islamic Implementation Layer™
+              provides additional principles and governance context.
             </p>
           </div>
         </Reveal>
@@ -529,6 +575,145 @@ function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="text-muted-foreground mt-6 text-xs">
+          Domain governance can be extended for specific ecosystems, including Shariah-aware and
+          halal operating requirements.
+        </p>
+      </Section>
+
+      {/* ISLAMIC IMPLEMENTATION LAYER */}
+      <Section id="islamic-implementation-layer" className="border-border border-y">
+        <Reveal>
+          <SectionHead
+            eyebrow="Islamic Implementation Layer™"
+            title="From principles to implementation."
+            intro="An architectural layer designed to translate relevant Islamic principles, Shariah considerations, halal baselines and Islamic business ethics into governance rules, decision support, product and service policies, AI behaviour and operational workflows."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["01", "Shariah Principles", "Relevant Islamic principles and governance considerations informing applicable decisions."],
+            ["02", "Halal Baseline", "A structured baseline for evaluating relevant products, services, transactions and business activities."],
+            ["03", "Islamic Implementation", "Translating principles and ethical requirements into practical technology, commerce, community and operational workflows."],
+            ["04", "Responsible AI Governance", "Human oversight, explainability, traceability, auditability, policy controls and responsible execution."],
+          ].map(([n, h, p], i) => (
+            <Reveal key={h} delay={i * 70}>
+              <div className="panel border-gold/25 h-full p-7">
+                <span className="text-gold/70 font-display text-xs">{n}</span>
+                <h3 className="text-gold font-display mt-4 text-sm tracking-[0.14em] uppercase">
+                  {h}
+                </h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={140}>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            <div className="panel px-6 py-5">
+              <p className="text-muted-foreground text-[10px] tracking-[0.2em] uppercase">
+                RÉNAI.CORE™
+              </p>
+              <p className="mt-2 text-sm">Autonomous intelligence — context, reasoning, execution.</p>
+            </div>
+            <div className="panel border-gold/25 px-6 py-5">
+              <p className="text-muted-foreground text-[10px] tracking-[0.2em] uppercase">
+                Islamic Implementation Layer™
+              </p>
+              <p className="mt-2 text-sm">
+                Principles, halal baseline, ethics, governance and implementation.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+        <p className="text-muted-foreground mt-8 max-w-3xl text-xs leading-relaxed">
+          This layer is designed to support Shariah-aware implementation and remains subject to
+          appropriate Shariah governance and expert oversight. AI systems are not a religious
+          authority, do not issue religious rulings and do not replace qualified scholars. No formal
+          Shariah certification is claimed.
+        </p>
+      </Section>
+
+      {/* DIGITAL ECOSYSTEM LAYERS */}
+      <Section id="ecosystems">
+        <Reveal>
+          <SectionHead
+            eyebrow="Digital Ecosystem Layers"
+            title="One intelligence architecture. Multiple real-world ecosystems."
+            intro="Above the intelligence core and governance layers, Digital Renaissance ecosystems can extend into community, commerce and services — each governed by domain-specific principles and policies."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <Reveal>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Social, built around trust.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Future Digital Renaissance ecosystems can incorporate community and social
+                experiences governed by responsible content policies, ethical interaction, privacy,
+                trust and domain-specific principles.
+              </p>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Where relevant, Islamic content governance can incorporate principles such as
+                honesty, dignity, responsible communication, avoidance of deception and appropriate
+                community standards.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={110}>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Commerce, with a governed foundation.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Digital Renaissance ecosystems can incorporate marketplace infrastructure designed
+                around transparent commerce, responsible seller participation, product and service
+                governance, appropriate halal baselines and auditable operational policies.
+              </p>
+              <div className="mt-6">
+                <FlowChain
+                  dense
+                  steps={[
+                    "Seller",
+                    "Product / Service",
+                    "Halal Baseline",
+                    "Governance",
+                    "Transaction",
+                    "Customer",
+                    "Audit / Feedback",
+                  ]}
+                />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={220}>
+            <div className="panel h-full p-7">
+              <StatusTag tone="muted">Strategic Layer</StatusTag>
+              <h3 className="mt-6 text-xl font-medium">Services, across real economies.</h3>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                The same architecture is configurable by domain across service ecosystems.
+              </p>
+              <ul className="text-muted-foreground mt-5 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                {[
+                  "Travel",
+                  "Umrah",
+                  "Workforce",
+                  "Medical Tourism",
+                  "Education",
+                  "Professional Services",
+                  "Community Services",
+                ].map((s) => (
+                  <li key={s} className="border-border/50 border-b py-1.5">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+        <p className="text-muted-foreground mt-8 text-xs">
+          Ecosystem layers describe architectural direction. Products are published only when
+          available.
+        </p>
       </Section>
 
       {/* PORTFOLIO */}
@@ -678,6 +863,12 @@ function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="text-muted-foreground mt-6 max-w-3xl text-xs leading-relaxed">
+          Each vertical follows the same pattern: RÉNAI.CORE™ → Islamic Implementation Layer™ where
+          relevant → vertical domain intelligence → autonomous executive → real-world ecosystem. The
+          architecture is configurable by domain; not every future ecosystem is Islamic.
+        </p>
+
 
       </Section>
 
@@ -1060,14 +1251,16 @@ function Home() {
             <SectionHead eyebrow="Business Model" title="A layered revenue architecture." />
             <ul className="mt-8 space-y-px">
               {[
-                "SaaS subscriptions",
+                "AI SaaS subscriptions",
                 "AI executive subscriptions",
-                "Enterprise licensing",
-                "Transaction / marketplace revenue",
+                "Platform subscriptions",
+                "Enterprise licensing & solutions",
+                "Marketplace commissions",
+                "Transaction infrastructure",
                 "API / platform usage",
-                "Vertical ecosystem commissions",
+                "Vertical ecosystem services",
                 "Strategic partnerships",
-                "Enterprise implementation",
+                "Digital services & implementation",
               ].map((r, i) => (
                 <li key={r} className="panel flex items-center gap-5 px-5 py-3.5 text-sm">
                   <span className="text-gold/70 text-xs">{String(i + 1).padStart(2, "0")}</span>
@@ -1212,11 +1405,29 @@ function Home() {
             </table>
           </div>
         </Reveal>
+        <Reveal delay={120}>
+          <div className="panel border-gold/25 mt-10 p-7 sm:p-9">
+            <p className="eyebrow">Category Ladder</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {[
+                ["Most AI tools", "Assist"],
+                ["Autonomous AI", "Execute"],
+                ["Shariah-First Ecosystem Architecture", "Execute within principles and governance"],
+              ].map(([k, v], i) => (
+                <div key={k} className={`px-5 py-4 ${i === 2 ? "border-gold/30 bg-gold/5 rounded-sm border" : "border-border rounded-sm border"}`}>
+                  <p className="text-muted-foreground text-[10px] tracking-[0.18em] uppercase">{k}</p>
+                  <p className="mt-2 text-sm">{v}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
         <p className="text-muted-foreground mt-6 text-xs">
           Category-level comparison of architectural approaches, not an assessment of any named
           product or company.
         </p>
       </Section>
+
 
       {/* FINAL CTA */}
       <section className="relative flex min-h-[85svh] items-center overflow-hidden px-5 py-24 sm:px-8">
@@ -1225,11 +1436,12 @@ function Home() {
         <div className="relative mx-auto max-w-4xl text-center">
           <Reveal>
             <h2 className="text-3xl leading-[1.06] font-semibold text-balance sm:text-5xl">
-              The next era of digital intelligence is being built now.
+              Building the next generation of Shariah-first digital ecosystems.
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl leading-relaxed">
-              Digital Renaissance Metaverse is building intelligent systems for a world where
-              technology does more than assist — it understands, adapts and executes.
+              Autonomous intelligence, governed by principles — Digital Renaissance Metaverse™ builds
+              intelligent systems for a world where technology does more than assist: it understands,
+              adapts and executes, responsibly.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link

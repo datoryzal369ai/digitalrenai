@@ -91,7 +91,8 @@ function Contact() {
               eyebrow="Contact"
               title="Start a strategic conversation."
               intro="Tell us who you are and what you're exploring. Enquiries are routed to the relevant corporate channel."
-            />
+              as="h1"
+          />
             <div className="mt-10 space-y-3">
               {[
                 ["Corporate", "Digital Renaissance Metaverse™"],

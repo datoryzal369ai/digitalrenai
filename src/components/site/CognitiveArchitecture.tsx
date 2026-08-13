@@ -19,8 +19,8 @@ const C = 310;
 const R_INNER = 170;
 const R_OUTER = 252;
 
-function polar(r: number, i: number, n: number) {
-  const a = (Math.PI * 2 * i) / n - Math.PI / 2;
+function polar(r: number, i: number, n: number, offset = 0) {
+  const a = (Math.PI * 2 * (i + offset)) / n - Math.PI / 2;
   return { a, x: C + Math.cos(a) * r, y: C + Math.sin(a) * r };
 }
 
@@ -72,14 +72,14 @@ function Diagram({ active, setActive }: { active: number; setActive: (i: number)
         style={{ transformOrigin: `${C}px ${C}px`, animationDirection: "reverse", animationDuration: "72s" }}
       />
       {GOVERNANCE.map((g, i) => {
-        const { a, x, y } = polar(R_OUTER, i, GOVERNANCE.length);
+        const { a, x, y } = polar(R_OUTER, i, GOVERNANCE.length, 0.5);
         return (
           <g key={g}>
             <circle cx={x} cy={y} r="9" fill="var(--background)" stroke="var(--gold)" strokeWidth="1" opacity="0.9" />
             <circle cx={x} cy={y} r="3.4" fill="var(--gold)" />
             <text
               x={x}
-              y={y + (Math.sin(a) >= 0 ? 26 : -17)}
+              y={y + (Math.sin(a) >= 0 ? 28 : -19)}
               textAnchor="middle"
               className="fill-gold text-[11px] tracking-[0.2em] uppercase"
               opacity="0.95"
@@ -91,7 +91,7 @@ function Diagram({ active, setActive }: { active: number; setActive: (i: number)
       })}
       <text
         x={C}
-        y={C - R_OUTER - 30}
+        y={C - R_OUTER - 34}
         textAnchor="middle"
         className="fill-gold text-[10px] tracking-[0.32em] uppercase"
         opacity="0.75"

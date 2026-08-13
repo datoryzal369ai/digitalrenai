@@ -114,6 +114,137 @@ function Technology() {
         </div>
       </Section>
 
+      <Section className="border-border border-t">
+        <Reveal>
+          <SectionHead
+            eyebrow="Cognitive Architecture"
+            title="Cognition inside. Governance around it."
+            intro="RÉNAI.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement."
+          />
+        </Reveal>
+        <Reveal delay={100}>
+          <CognitiveArchitecture className="mt-14" />
+        </Reveal>
+      </Section>
+
+      <Section className="border-border border-t">
+        <Reveal>
+          <SectionHead
+            eyebrow="Cognitive Intelligence Layer"
+            title="A closed cognitive loop, stage by stage."
+            intro="Perceive → Understand → Remember → Reason → Plan → Decide → Act → Evaluate → Controlled Learning, then back into perception."
+          />
+        </Reveal>
+        <div className="mt-12 grid gap-px sm:grid-cols-2 lg:grid-cols-3">
+          {cognitive.map(([n, h, p], i) => (
+            <Reveal key={h} delay={i * 50}>
+              <div className="panel h-full p-6">
+                <span className="text-primary/60 font-display text-xs tracking-[0.2em]">{n}</span>
+                <h3 className="font-display mt-3 text-sm tracking-[0.14em] uppercase">{h}</h3>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{p}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="border-border border-t">
+        <Reveal>
+          <div className="panel border-platinum/20 p-8 md:p-12">
+            <p className="eyebrow">Architectural Principle</p>
+            <p className="font-display mt-6 text-xl leading-[1.35] text-balance sm:text-2xl md:text-3xl">
+              Intelligence determines what can be understood, reasoned about and executed.
+              <span className="text-gold">
+                {" "}
+                Governance determines how, when and under what boundaries it may be executed.
+              </span>
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
+      <Section className="border-border border-t">
+        <Reveal>
+          <SectionHead
+            eyebrow="Cognitive Differentiation"
+            title="From AI assistance to cognitive execution."
+            intro="Most AI tools stop at conversation. RÉNAI.CORE™ is designed to carry a request through the full cognitive chain — and to keep every step inside governance boundaries."
+          />
+        </Reveal>
+        <Reveal delay={100}>
+          <div className="mt-10">
+            <FlowChain
+              steps={[
+                "Context",
+                "Knowledge",
+                "Memory",
+                "Reasoning",
+                "Planning",
+                "Decision",
+                "Execution",
+                "Evaluation",
+                "Controlled Learning",
+              ]}
+            />
+          </div>
+        </Reveal>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <Reveal>
+            <div className="panel h-full p-6">
+              <h3 className="text-muted-foreground font-display text-sm tracking-[0.14em] uppercase">
+                AI Assistance
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+                Answers a prompt, then stops. No durable memory of the operation, no evaluation of
+                the outcome, no accountable path from intent to executed work.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="panel border-primary/30 h-full p-6">
+              <h3 className="text-primary font-display text-sm tracking-[0.14em] uppercase">
+                Cognitive Execution
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+                Understands context, retrieves memory, reasons over constraints, plans, decides,
+                executes permitted workflows, measures the result and improves under review.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+        <p className="text-muted-foreground mt-8 text-xs">
+          RÉNAI.CORE™ is not a claim of artificial general intelligence, and does not perform
+          unrestricted self-modification. Learning is bounded, reviewed and reversible.
+        </p>
+      </Section>
+
+      <Section className="border-border border-t">
+        <Reveal>
+          <SectionHead
+            eyebrow="Architecture Hierarchy"
+            title="From the core to real-world outcomes."
+          />
+        </Reveal>
+        <div className="mt-12 space-y-px">
+          {hierarchy.map((h, i) => (
+            <Reveal key={h} delay={i * 60}>
+              <div className="panel flex items-center gap-5 p-5 md:p-6">
+                <span className="text-primary/50 font-display w-10 text-xs tracking-[0.2em]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className={`font-display text-sm tracking-[0.14em] uppercase sm:text-base ${
+                    i === 0 ? "text-platinum" : i === 1 ? "text-primary" : ""
+                  }`}
+                >
+                  {h}
+                </span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
       <Section className="border-border border-y">
         <Reveal>
           <SectionHead eyebrow="Capabilities" title="Eight capabilities, one governed core." />

@@ -184,6 +184,22 @@ function Technology() {
             </div>
           ))}
         </div>
+        <div className="mt-8 flex flex-wrap gap-2">
+          {governanceControls.map((g) => (
+            <span
+              key={g}
+              className="border-gold/30 text-gold/90 bg-gold/5 rounded-full border px-3 py-1.5 text-[10px] tracking-[0.18em] uppercase"
+            >
+              {g}
+            </span>
+          ))}
+        </div>
+        <p className="text-muted-foreground mt-6 max-w-3xl text-sm leading-relaxed">
+          Where an ecosystem is Islamic by nature, the Islamic Implementation Layer™ operates as a
+          domain-specific governance and implementation layer within this control architecture. It
+          is applied only to relevant ecosystems, not universally across non-Islamic verticals.
+        </p>
+
         <p className="text-muted-foreground mt-8 text-xs">
           Formal certifications and compliance attestations will be published only once obtained and
           verifiable.

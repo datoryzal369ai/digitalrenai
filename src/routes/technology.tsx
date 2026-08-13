@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
+import { CognitiveArchitecture } from "@/components/site/CognitiveArchitecture";
 import renaiCore from "@/assets/renai-core-mark.png.asset.json";
 
-const title = "Technology — RÉNAI.CORE™ Autonomous Intelligence Architecture";
+const title = "Technology — RÉNAI.CORE™ Cognitive Intelligence Architecture";
 const description =
-  "RÉNAI.CORE™ is Digital Renaissance Metaverse's modular intelligence architecture: context, knowledge, memory, reasoning, orchestration, execution, evaluation and governance.";
+  "RÉNAI.CORE™ is Digital Renaissance Metaverse's cognitive intelligence architecture — perception, context, memory, reasoning, planning, decision, action, evaluation and controlled learning, governed end to end.";
 
 export const Route = createFileRoute("/technology")({
   component: Technology,
@@ -23,6 +24,40 @@ export const Route = createFileRoute("/technology")({
   }),
 });
 
+const cognitive = [
+  ["01", "Perception", "Observe signals, events, users, environments and operational activity."],
+  ["02", "Context", "Understand business, domain, user and environmental context."],
+  ["03", "Memory", "Retrieve relevant knowledge, history, experience and operational memory."],
+  ["04", "Reasoning", "Analyse information, relationships, constraints, objectives and possible outcomes."],
+  ["05", "Planning", "Determine possible strategies, workflows and courses of action."],
+  ["06", "Decision", "Select the appropriate next action based on objectives, context, permissions and constraints."],
+  ["07", "Action", "Execute approved workflows, tools and operational tasks."],
+  ["08", "Evaluation", "Measure outcomes, performance, quality and consequences."],
+  ["09", "Controlled Learning", "Capture experience and improve system performance within defined governance boundaries."],
+];
+
+const governanceControls = [
+  "Security",
+  "Policy Controls",
+  "Permissions",
+  "Human Oversight",
+  "Auditability",
+  "Explainability",
+  "Responsible AI",
+  "Domain Governance",
+  "Compliance",
+  "Observability",
+];
+
+const hierarchy = [
+  "Digital Renaissance Metaverse™",
+  "RÉNAI.CORE™",
+  "Cognitive Intelligence",
+  "Autonomous AI Executives",
+  "Vertical Digital Ecosystems",
+  "Real-World Business Outcomes",
+];
+
 const capabilities = [
   ["Contextual Understanding", "Interpret business situations across channels, records and history."],
   ["Domain Knowledge", "Vertical knowledge graphs encode how an industry actually works."],
@@ -33,6 +68,7 @@ const capabilities = [
   ["Evaluation", "Benchmarks and outcome scoring on every consequential action."],
   ["Controlled Learning", "Improvement gated by review — never silent drift."],
 ];
+
 
 function Technology() {
   return (

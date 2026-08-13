@@ -78,10 +78,11 @@ function Technology() {
           <Reveal>
             <SectionHead
               eyebrow="RÉNAI.CORE™"
-              title="The Autonomous Intelligence Core."
-              intro="An evolving intelligence layer designed to power vertical autonomous AI systems. RÉNAI.CORE™ is an Autonomous Intelligence Architecture — it is not a claim of artificial general intelligence."
+              title="The Cognitive Intelligence Core."
+              intro="RÉNAI.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement. It is both a cognitive architecture and a governance architecture — not a claim of artificial general intelligence."
               as="h1"
           />
+
             <p className="text-muted-foreground mt-6 max-w-2xl text-sm leading-relaxed">
               Digital Renaissance combines autonomous intelligence with governed implementation.
               Where relevant, the Islamic Implementation Layer™ connects Islamic principles, halal

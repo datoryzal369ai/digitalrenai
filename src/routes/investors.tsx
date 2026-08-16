@@ -3,7 +3,7 @@ import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components
 
 const title = "Investors & Strategic Partners — Digital Renaissance Metaverse™";
 const description =
-  "Investor readiness, strategic roadmap and partnership pathways for Digital Renaissance Metaverse, builder of RÉNAI.CORE™ and vertical autonomous AI platforms.";
+  "Investor readiness, strategic roadmap and partnership pathways for Digital Renaissance Metaverse, builder of RÉNAIO.CORE™ and vertical autonomous AI platforms.";
 
 export const Route = createFileRoute("/investors")({
   component: Investors,
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/investors")({
 });
 
 const phases = [
-  ["Phase 1", "Core Intelligence Development", "RÉNAI.CORE™ architecture and evaluation foundations."],
+  ["Phase 1", "Core Intelligence Development", "RÉNAIO.CORE™ architecture and evaluation foundations."],
   ["Phase 2", "First Vertical Deployment", "UMRAIO® within the UMRAVERSE® ecosystem."],
   ["Phase 3", "Market Expansion", "Deepen the Umrah vertical and broaden agency adoption."],
   ["Phase 4", "Multi-Vertical Rollout", "WORVERSE® and MEDIVERSE® ecosystem activation."],
@@ -45,7 +45,7 @@ function Investors() {
         <Reveal delay={120}>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Proprietary Core", "RÉNAI.CORE™ is reusable intelligence infrastructure across verticals."],
+              ["Proprietary Core", "RÉNAIO.CORE™ is reusable intelligence infrastructure across verticals."],
               ["Vertical Depth", "Domain knowledge is the defensible layer, not the model."],
               ["Autonomous Execution", "Value delivered as completed work, not recommendations."],
               ["Governed by Design", "Oversight and auditability built into the architecture."],

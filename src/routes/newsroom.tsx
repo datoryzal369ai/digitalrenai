@@ -39,7 +39,7 @@ function Newsroom() {
         <div className="grid gap-6 lg:grid-cols-3">
           {[
             ["Company Announcements", "Corporate milestones, appointments and structural news."],
-            ["Technology Milestones", "RÉNAI.CORE™ and platform development updates."],
+            ["Technology Milestones", "RÉNAIO.CORE™ and platform development updates."],
             ["Media Resources", "Brand assets, logo usage and company boilerplate."],
           ].map(([h, p], i) => (
             <Reveal key={h} delay={i * 100}>

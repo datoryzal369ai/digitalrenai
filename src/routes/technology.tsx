@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal, Section, SectionHead, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
 import { CognitiveArchitecture } from "@/components/site/CognitiveArchitecture";
-import renaiCore from "@/assets/renai-core-mark.png.asset.json";
+import renaiCore from "@/assets/renaio-core-mark.png.asset.json";
 
-const title = "Technology — RÉNAI.CORE™ Cognitive Intelligence Architecture";
+const title = "Technology — RÉNAIO.CORE™ Cognitive Intelligence Architecture";
 const description =
-  "RÉNAI.CORE™ is Digital Renaissance Metaverse's cognitive intelligence architecture — perception, context, memory, reasoning, planning, decision, action, evaluation and controlled learning, governed end to end.";
+  "RÉNAIO.CORE™ is Digital Renaissance Metaverse's cognitive intelligence architecture — perception, context, memory, reasoning, planning, decision, action, evaluation and controlled learning, governed end to end.";
 
 export const Route = createFileRoute("/technology")({
   component: Technology,
@@ -51,7 +51,7 @@ const governanceControls = [
 
 const hierarchy = [
   "Digital Renaissance Metaverse™",
-  "RÉNAI.CORE™",
+  "RÉNAIO.CORE™",
   "Cognitive Intelligence",
   "Autonomous AI Executives",
   "Vertical Digital Ecosystems",
@@ -77,9 +77,9 @@ function Technology() {
         <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <Reveal>
             <SectionHead
-              eyebrow="RÉNAI.CORE™"
+              eyebrow="RÉNAIO.CORE™"
               title="The Cognitive Intelligence Core."
-              intro="RÉNAI.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement. It is both a cognitive architecture and a governance architecture — not a claim of artificial general intelligence."
+              intro="RÉNAIO.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement. It is both a cognitive architecture and a governance architecture — not a claim of artificial general intelligence."
               as="h1"
           />
 
@@ -96,7 +96,7 @@ function Technology() {
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
               >
-                Explore RÉNAI.CORE™ →
+                Explore RÉNAIO.CORE™ →
               </a>
               <a
                 href="https://renai-core.lovable.app"
@@ -120,7 +120,7 @@ function Technology() {
           <SectionHead
             eyebrow="Cognitive Architecture"
             title="Cognition inside. Governance around it."
-            intro="RÉNAI.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement."
+            intro="RÉNAIO.CORE™ is an Autonomous Intelligence Architecture designed for governed cognitive reasoning, decision support, workflow execution and controlled continuous improvement."
           />
         </Reveal>
         <Reveal delay={100}>
@@ -169,7 +169,7 @@ function Technology() {
           <SectionHead
             eyebrow="Cognitive Differentiation"
             title="From AI assistance to cognitive execution."
-            intro="Most AI tools stop at conversation. RÉNAI.CORE™ is designed to carry a request through the full cognitive chain — and to keep every step inside governance boundaries."
+            intro="Most AI tools stop at conversation. RÉNAIO.CORE™ is designed to carry a request through the full cognitive chain — and to keep every step inside governance boundaries."
           />
         </Reveal>
         <Reveal delay={100}>
@@ -214,7 +214,7 @@ function Technology() {
           </Reveal>
         </div>
         <p className="text-muted-foreground mt-8 text-xs">
-          RÉNAI.CORE™ is not a claim of artificial general intelligence, and does not perform
+          RÉNAIO.CORE™ is not a claim of artificial general intelligence, and does not perform
           unrestricted self-modification. Learning is bounded, reviewed and reversible.
         </p>
       </Section>
@@ -288,7 +288,7 @@ function Technology() {
         <Reveal delay={160}>
           <img
             src={renaiCore.url}
-            alt="RÉNAI.CORE — The Autonomous Intelligence Core"
+            alt="RÉNAIO.CORE — The Autonomous Intelligence Core"
             className="mt-14 w-full rounded-sm"
             loading="lazy"
           />
@@ -343,7 +343,7 @@ function Technology() {
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
           >
-            Discover RÉNAI.CORE™ →
+            Discover RÉNAIO.CORE™ →
           </a>
         </div>
 

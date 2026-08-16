@@ -159,7 +159,7 @@ function FounderGlyph() {
 const architectureRows: { label: string; nodes: string[]; tone: Tone }[] = [
   {
     label: "Level 01 — Founder & Ecosystem Architect",
-    nodes: ["Vision", "Architecture", "RÉNAI.CORE™"],
+    nodes: ["Vision", "Architecture", "RÉNAIO.CORE™"],
     tone: "gold",
   },
   {
@@ -217,7 +217,7 @@ export function Leadership() {
                   </p>
                   <div className="hairline my-7" />
                   <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
-                    Leads the company&apos;s vision, digital ecosystem architecture, RÉNAI.CORE™
+                    Leads the company&apos;s vision, digital ecosystem architecture, RÉNAIO.CORE™
                     intelligence direction, vertical platform strategy and long-term corporate
                     development.
                   </p>
@@ -225,7 +225,7 @@ export function Leadership() {
                     tone="gold"
                     items={[
                       "Digital Ecosystem Architecture",
-                      "RÉNAI.CORE™ Strategy",
+                      "RÉNAIO.CORE™ Strategy",
                       "AI & Platform Vision",
                       "Industry Ecosystem Strategy",
                       "Corporate Development",
@@ -234,7 +234,7 @@ export function Leadership() {
                   />
                   <HoverArchitecture
                     tone="gold"
-                    items={["Vision", "Architecture", "RÉNAI.CORE", "Ecosystem"]}
+                    items={["Vision", "Architecture", "RÉNAIO.CORE", "Ecosystem"]}
                   />
                 </div>
                 <div className="flex justify-center lg:justify-end">
@@ -443,7 +443,7 @@ export function Leadership() {
             </p>
             <div className="mt-5 grid gap-px sm:grid-cols-2 lg:grid-cols-4">
               {[
-                "RÉNAI.CORE™",
+                "RÉNAIO.CORE™",
                 "Autonomous AI Executives",
                 "Digital Ecosystems",
                 "Corporate Development",

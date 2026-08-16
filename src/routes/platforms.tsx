@@ -32,7 +32,7 @@ function Platforms() {
           <SectionHead
             eyebrow="AI Platform Portfolio"
             title="One intelligence core, deployed vertical by vertical."
-            intro="Each ecosystem carries the domain knowledge of its industry. Each autonomous AI business executive operates inside it, powered by RÉNAI.CORE™."
+            intro="Each ecosystem carries the domain knowledge of its industry. Each autonomous AI business executive operates inside it, powered by RÉNAIO.CORE™."
             as="h1"
           />
         </Reveal>

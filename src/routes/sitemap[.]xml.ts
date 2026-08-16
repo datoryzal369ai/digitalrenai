@@ -14,8 +14,8 @@ interface SitemapEntry {
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
-      GET: async ({ request }) => {
-        const BASE_URL = new URL(request.url).origin;
+      GET: async () => {
+        const BASE_URL = "https://digitalrenai.com";
         const entries: SitemapEntry[] = [
 
           { path: "/", changefreq: "weekly", priority: "1.0" },

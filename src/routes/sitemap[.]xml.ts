@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// Absolute URLs are derived from the incoming request origin so the sitemap
-// stays valid on preview, the Lovable domain and any custom domain.
+// Sitemap URLs use the canonical custom domain so search engines index the
+// primary site rather than preview or staging origins.
 
 
 interface SitemapEntry {

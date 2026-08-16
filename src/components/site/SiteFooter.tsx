@@ -5,7 +5,7 @@ const columns = [
   {
     title: "Technology",
     links: [
-      { label: "RÉNAI.CORE™", href: "https://renai-core.lovable.app" },
+      { label: "RÉNAIO.CORE™", href: "https://renai-core.lovable.app" },
       { label: "Technology Overview", to: "/technology" },
       { label: "AI Governance", to: "/technology" },
     ],
@@ -32,7 +32,7 @@ const columns = [
   {
     title: "Explore",
     links: [
-      { label: "Explore RÉNAI.CORE →", href: "https://renai-core.lovable.app" },
+      { label: "Explore RÉNAIO.CORE →", href: "https://renai-core.lovable.app" },
       { label: "Explore UMRAIO →", href: "https://www.umraio.com" },
     ],
   },

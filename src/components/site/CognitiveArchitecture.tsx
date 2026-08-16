@@ -25,7 +25,7 @@ export function CognitiveArchitecture({ className = "" }: { className?: string }
   return (
     <div className={`grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center ${className}`}>
       <div className="relative mx-auto w-full max-w-xl">
-        <svg viewBox="0 0 520 520" className="h-full w-full" role="img" aria-label="RÉNAI.CORE cognitive architecture with governance control ring">
+        <svg viewBox="0 0 520 520" className="h-full w-full" role="img" aria-label="RÉNAIO.CORE cognitive architecture with governance control ring">
           <defs>
             <radialGradient id="rcCore" cx="50%" cy="50%">
               <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.5" />

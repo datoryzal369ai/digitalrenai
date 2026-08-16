@@ -3,7 +3,7 @@ import { TrendingUp, MessagesSquare, Workflow, BarChart3 } from "lucide-react";
 import { Reveal, Section, SectionHead, StatusTag, FlowChain } from "@/components/site/primitives";
 import { CoreVisual } from "@/components/site/CoreVisual";
 import drmLogo from "@/assets/drm-mark.png.asset.json";
-import renaiCore from "@/assets/renai-core-mark.png.asset.json";
+import renaiCore from "@/assets/renaio-core-mark.png.asset.json";
 import umraverse from "@/assets/umraverse-mark.png.asset.json";
 import umraio from "@/assets/umraio.png.asset.json";
 import umraioWordmark from "@/assets/umraio-wordmark.png.asset.json";
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Product",
-              name: "RÉNAI.CORE™",
+              name: "RÉNAIO.CORE™",
               description:
                 "The Autonomous Intelligence Core: a modular intelligence architecture for contextual reasoning, memory, orchestration, evaluation and governed autonomous execution. Under development.",
               brand: { "@id": "/#organization" },
@@ -80,7 +80,7 @@ export const Route = createFileRoute("/")({
               name: "UMRAIO®",
               url: "https://www.umraio.com",
               description:
-                "Autonomous AI Business Executive for modern Umrah agencies, operating within the UMRAVERSE® ecosystem and powered by RÉNAI.CORE™. Flagship product in active development.",
+                "Autonomous AI Business Executive for modern Umrah agencies, operating within the UMRAVERSE® ecosystem and powered by RÉNAIO.CORE™. Flagship product in active development.",
               brand: { "@id": "/#organization" },
               sameAs: ["https://www.umraio.com"],
             },
@@ -98,10 +98,10 @@ export const Route = createFileRoute("/")({
                 },
                 {
                   "@type": "Question",
-                  name: "What is RÉNAI.CORE™?",
+                  name: "What is RÉNAIO.CORE™?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "RÉNAI.CORE™ is the company's autonomous intelligence architecture — a modular intelligence layer for context, reasoning, memory, orchestration, evaluation and governed execution. It is not a claim of AGI.",
+                    text: "RÉNAIO.CORE™ is the company's autonomous intelligence architecture — a modular intelligence layer for context, reasoning, memory, orchestration, evaluation and governed execution. It is not a claim of AGI.",
                   },
                 },
                 {
@@ -109,7 +109,7 @@ export const Route = createFileRoute("/")({
                   name: "What is UMRAIO®?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "UMRAIO® is Digital Renaissance Metaverse's flagship vertical autonomous AI business executive, built for modern Umrah agencies within the UMRAVERSE® ecosystem and powered by the RÉNAI.CORE™ intelligence architecture. The dedicated product experience is at https://www.umraio.com.",
+                    text: "UMRAIO® is Digital Renaissance Metaverse's flagship vertical autonomous AI business executive, built for modern Umrah agencies within the UMRAVERSE® ecosystem and powered by the RÉNAIO.CORE™ intelligence architecture. The dedicated product experience is at https://www.umraio.com.",
                   },
                 },
               ],
@@ -237,7 +237,7 @@ function Home() {
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
               >
-                Explore RÉNAI.CORE™ →
+                Explore RÉNAIO.CORE™ →
               </a>
               <a
                 href={UMRAIO_URL}
@@ -394,7 +394,7 @@ function Home() {
           <div className="mt-14 space-y-3 text-center">
             {[
               { label: "Digital Renaissance Metaverse™", sub: "The Ecosystem Architect", tone: "gold" },
-              { label: "RÉNAI.CORE™", sub: "The Autonomous Intelligence Core", tone: "cyan" },
+              { label: "RÉNAIO.CORE™", sub: "The Autonomous Intelligence Core", tone: "cyan" },
               {
                 label: "Islamic Implementation Layer™",
                 sub: "Principles • Halal • Ethics • Governance • Implementation",
@@ -447,20 +447,20 @@ function Home() {
         </Reveal>
       </Section>
 
-      {/* RÉNAI.CORE */}
+      {/* RÉNAIO.CORE */}
       <Section id="renai-core" className="border-border border-y">
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:items-center">
           <Reveal>
             <img
               src={renaiCore.url}
-              alt="RÉNAI.CORE — The Autonomous Intelligence Core"
+              alt="RÉNAIO.CORE — The Autonomous Intelligence Core"
               className="w-full rounded-sm"
               loading="lazy"
             />
           </Reveal>
           <Reveal delay={120}>
             <SectionHead
-              eyebrow="RÉNAI.CORE™"
+              eyebrow="RÉNAIO.CORE™"
               title="The intelligence layer behind our ecosystems."
               intro="An evolving intelligence layer designed to power vertical autonomous AI systems — an Autonomous Intelligence Architecture, not a claim of AGI."
             />
@@ -491,7 +491,7 @@ function Home() {
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-3.5 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors"
               >
-                Explore RÉNAI.CORE™ →
+                Explore RÉNAIO.CORE™ →
               </a>
               <a
                 href={RENAI_CORE_URL}
@@ -561,7 +561,7 @@ function Home() {
           <SectionHead
             eyebrow="Technology Stack"
             title="A modular intelligence architecture — not a single AI model."
-            intro="RÉNAI.CORE™ is designed in layers so that reasoning, memory, execution and governance can evolve independently and be reused across every vertical ecosystem."
+            intro="RÉNAIO.CORE™ is designed in layers so that reasoning, memory, execution and governance can evolve independently and be reused across every vertical ecosystem."
           />
         </Reveal>
         <div className="mt-14 space-y-px">
@@ -612,7 +612,7 @@ function Home() {
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             <div className="panel px-6 py-5">
               <p className="text-muted-foreground text-[10px] tracking-[0.2em] uppercase">
-                RÉNAI.CORE™
+                RÉNAIO.CORE™
               </p>
               <p className="mt-2 text-sm">Autonomous intelligence — context, reasoning, execution.</p>
             </div>
@@ -722,7 +722,7 @@ function Home() {
           <SectionHead
             eyebrow="AI Platform Portfolio"
             title="From one intelligence core to multiple industries."
-            intro="RÉNAI.CORE™ provides the intelligence architecture. Our vertical ecosystems provide the domain context. Autonomous AI executives turn that intelligence into business action."
+            intro="RÉNAIO.CORE™ provides the intelligence architecture. Our vertical ecosystems provide the domain context. Autonomous AI executives turn that intelligence into business action."
           />
         </Reveal>
 
@@ -799,7 +799,7 @@ function Home() {
                   <span className="hairline" />
                 </div>
                 <p className="text-gold font-display mt-3 text-sm tracking-[0.2em] uppercase">
-                  RÉNAI.CORE™
+                  RÉNAIO.CORE™
                 </p>
 
                 <div className="mt-7 flex items-center gap-5">
@@ -864,7 +864,7 @@ function Home() {
           ))}
         </div>
         <p className="text-muted-foreground mt-6 max-w-3xl text-xs leading-relaxed">
-          Each vertical follows the same pattern: RÉNAI.CORE™ → Islamic Implementation Layer™ where
+          Each vertical follows the same pattern: RÉNAIO.CORE™ → Islamic Implementation Layer™ where
           relevant → vertical domain intelligence → autonomous executive → real-world ecosystem. The
           architecture is configurable by domain; not every future ecosystem is Islamic.
         </p>
@@ -902,7 +902,7 @@ function Home() {
               Powered by
             </p>
             <p className="text-gold font-display mt-2 text-sm tracking-[0.2em] uppercase">
-              RÉNAI.CORE™
+              RÉNAIO.CORE™
             </p>
             <p className="text-muted-foreground mt-6 text-[10px] tracking-[0.24em] uppercase">
               Part of
@@ -980,7 +980,7 @@ function Home() {
             </div>
             <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
             <div className="border-gold/40 bg-gold/5 text-gold font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
-              RÉNAI.CORE™
+              RÉNAIO.CORE™
             </div>
             <div className="bg-primary/40 mx-auto my-5 h-6 w-px" />
             <div className="border-primary/40 bg-primary/10 text-primary font-display rounded-sm border px-6 py-5 text-center tracking-[0.16em] uppercase">
@@ -1013,7 +1013,7 @@ function Home() {
           <div className="mt-14 grid gap-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center">
             <div className="border-gold/40 bg-gold/5 rounded-sm border px-6 py-5 text-center">
               <p className="text-gold font-display text-sm tracking-[0.18em] uppercase">
-                RÉNAI.CORE™
+                RÉNAIO.CORE™
               </p>
               <p className="text-muted-foreground mt-1.5 text-[10px] tracking-[0.2em] uppercase">
                 The Autonomous Intelligence Core
@@ -1156,7 +1156,7 @@ function Home() {
               t: "Autonomous AI Executive",
               steps: [
                 "Business Context",
-                "RÉNAI.CORE",
+                "RÉNAIO.CORE",
                 "Reason",
                 "Decide",
                 "Execute",
@@ -1205,12 +1205,12 @@ function Home() {
           <figure className="panel mt-12 overflow-hidden">
             <img
               src={dashboard.url}
-              alt="RÉNAI.CORE Meta-Intelligence Command Center prototype interface"
+              alt="RÉNAIO.CORE Meta-Intelligence Command Center prototype interface"
               className="w-full"
               loading="lazy"
             />
             <figcaption className="text-muted-foreground border-border border-t px-5 py-4 text-[11px] tracking-[0.16em] uppercase">
-              RÉNAI.CORE™ Command Center — Prototype interface, in development
+              RÉNAIO.CORE™ Command Center — Prototype interface, in development
             </figcaption>
           </figure>
         </Reveal>

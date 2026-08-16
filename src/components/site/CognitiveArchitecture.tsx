@@ -124,7 +124,7 @@ export function CognitiveArchitecture({ className = "" }: { className?: string }
 
           <circle cx={C} cy={C} r="52" fill="var(--background)" stroke="var(--platinum)" strokeWidth="1" opacity="0.9" />
           <text x={C} y={C - 2} textAnchor="middle" className="fill-platinum text-[11px] tracking-[0.16em]">
-            RÉNAI
+            RÉNAIO
           </text>
           <text x={C} y={C + 14} textAnchor="middle" className="fill-primary text-[11px] tracking-[0.16em]">
             .CORE™

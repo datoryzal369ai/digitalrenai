@@ -124,6 +124,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "twitter:image", content: `${SITE_URL}${socialPreview.url}` },
       { name: "theme-color", content: "#0b0f16" },
+      {
+        name: "google-site-verification",
+        content: "o54SiDf3YDB9oCOar4CInhCVXHXq0zXx6WI0PSu9dcU",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
